@@ -1,0 +1,27 @@
+[user]
+	name = Clement Onawole
+	email = dapo.onawole@gmail.com
+	signingKey = ""
+[pull]
+	rebase = false
+[alias]
+	co = checkout
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+	br = branch
+	ci = commit
+	st = status
+[gpg]
+	program = gpg
+[commit]
+	gpgSign = false
+[tag]
+	forceSignAnnotated = false
+[cola]
+	spellcheck = false
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
