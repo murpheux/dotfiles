@@ -1,17 +1,30 @@
+[push]
+	default = current
 [user]
 	name = Clement Onawole
 	email = dapo.onawole@gmail.com
-	signingKey = ""
+    signingKey = "3E00A9CE54BEBAD7"
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
 [pull]
 	rebase = false
 [alias]
-	co = checkout
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	visual = !gitk
+    co = checkout
 	br = branch
 	ci = commit
 	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+	glo = log --oneline --decorate --all --graph
+	glog = log --pretty=format:'%h%x09%an%x09%ad%x09%s'
+	sb = submodule
+        wdiff = diff --word-diff=color --unified=1
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [gpg]
 	program = gpg
 [commit]
@@ -24,4 +37,27 @@
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
+    process = git-lfs filter-process
+[http]
+	sslverify = false
+[diff]
+	tool = vimdiff
+[diff "odt"]
+        binary = true
+        textconv = odt2txt
+[diff "pandoc"]
+        textconv = pandoc --to=markdown
+        prompt = false
+[difftool "diffmerge"]
+	cmd = diffmerge \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	cmd = "diffmerge --merge --result=\"$MERGED\" \"$LOCAL\" \"$(if test -f \"$BASE\"; then echo \"$BASE\"; else echo \"$LOCAL\"; fi)\" \"$REMOTE\""
+	trustExitCode = true
+[mergetool]
+	keepBackup = false
+	prompt = false
+	keepTemporaries = false
+[difftool]
+	prompt = false
