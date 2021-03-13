@@ -262,8 +262,8 @@ alias pm='sudo podman'
 alias bd='sudo buildah'
 alias crictl='sudo crictl'
 alias sudo='sudo '
-alias speed='speedtest-cli --no-upload --single --bytes --server 4637 --simple'
-alias python=python3
+alias speed='speedtest-cli --server 4637 --simple'
+#alias python=python3
 
 source <(kubectl completion zsh)
 complete -F __start_kubectl kb
@@ -322,7 +322,8 @@ alias au='sudo apt update -y && sudo apt upgrade -y'
 alias reboot='sudo reboot'
 alias untar='tar -zxvf '
 alias wget='wget -c '
-alias ping='ping -c 10'
+#alias ping='ping -c 10'
+alias ydl=youtube-dl
 
 # setterm -linewrap off
 
@@ -340,8 +341,23 @@ RANDOM=$$$(date +%s)
 selected_os=${linux_distros[$RANDOM % ${#linux_distros[@]}]}
 export PF_ASCII=$selected_os
 pfetch
-
+colorscript random
 echo ">>>>>>>> $(fortune) <<<<<<<<"
 
 PATH=$PATH:$HOME/.SpaceVim/bin
+
+# zsh history
+export HISTCONTROL=ignoreboth:erasedups
+export HISTFILESIZE=100000
+export HISTSIZE=100000
+setopt INC_APPEND_HISTORY
+#export HISTTIMEFORMAT="[%F %T] "
+#setopt EXTENDED_HISTORY
+setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+
+export PATH="$PATH:/home/murpheux/istio-1.9.1/bin"
+export PATH="${PATH}:${HOME}/.krew/bin"
+
+export AWS_PROFILE=murpheux
 
