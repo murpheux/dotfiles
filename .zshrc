@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 export TERM="xterm-256color"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -36,15 +43,15 @@ WHITE='\033[1;37m'
 #ZSH_THEME="spaceship"
 #ZSH_THEME="agnoster"
 
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(history)
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
+POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=(history)
+POWERLEVEL10K_SHORTEN_DIR_LENGTH=1
 
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+POWERLEVEL10K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
+POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 
-POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='red'
+POWERLEVEL10K_VCS_MODIFIED_BACKGROUND='red'
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -291,7 +298,7 @@ export PATH="/usr/local/opt/curl/bin:$PATH"
 # export DGIINI_VERSION=$(curl --user murpheux:$JK_TOKEN http://gru:8080/job/dgiini-scarlet_dk/lastBuild/buildNumber)
 export DGIINI_HOME=~/Workspace/Projects/dgiini
 
-export TF_VAR_do_token=$(cat ~/cred/docean/access_token)
+#export TF_VAR_do_token=$(cat ~/cred/docean/access_token)
 
 # AUTH0
 export CLIENT_ID=MPAic7TfErCVtH2F4JQaqCQl5wYWjWA4
@@ -324,6 +331,7 @@ alias untar='tar -zxvf '
 alias wget='wget -c '
 #alias ping='ping -c 10'
 alias ydl=youtube-dl
+alias lnd=linode-cli
 
 # setterm -linewrap off
 
@@ -361,3 +369,13 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 
 export AWS_PROFILE=murpheux
 
+# set wordwrap
+setterm -linewrap off
+
+
+autoload -U +X compinit && compinit -i
+autoload -U +X bashcompinit && bashcompinit -i
+complete -o nospace -F /usr/local/bin/aliyun aliyun
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
