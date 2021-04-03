@@ -1,0 +1,5 @@
+2021/04/02-21:46:10.711 3bbe Reusing MANIFEST /home/murpheux/.config/BraveSoftware/Brave-Browser/Default/IndexedDB/https_cloud.google.com_0.indexeddb.leveldb/MANIFEST-000001
+2021/04/02-21:48:22.119 3c59 Level-0 table #5: started
+2021/04/02-21:48:22.121 3c59 Level-0 table #5: 2370 bytes OK
+2021/04/02-21:48:22.123 3c59 Delete type=0 #3
+2021/04/02-21:48:22.123 3c59 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

@@ -1,0 +1,13 @@
+2021-04-03 13:57:15,551 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2021-04-03 13:57:15,554 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'configurations']
+2021-04-03 13:57:15,556 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'configurations', 'list']
+2021-04-03 13:57:15,558 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'config']
+2021-04-03 13:57:15,559 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'config', 'configurations']
+2021-04-03 13:57:15,561 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'config', 'configurations', 'list']
+2021-04-03 13:57:15,563 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'config']
+2021-04-03 13:57:15,564 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'config', 'configurations']
+2021-04-03 13:57:15,566 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'config', 'configurations', 'list']
+2021-04-03 13:57:15,567 ERROR    root            (gcloud.config.configurations.list) unrecognized arguments: default 
+
+To search the help text of gcloud commands, run:
+  gcloud help -- SEARCH_TERMS

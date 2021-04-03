@@ -1,0 +1,131 @@
+#=============================================================================
+# dark_powered.toml --- dark powered configuration example for SpaceVim
+# Copyright (c) 2016-2020 Wang Shidong & Contributors
+# Author: Wang Shidong < wsdjeg at 163.com >
+# URL: https://spacevim.org
+# License: GPLv3
+#=============================================================================
+
+# All SpaceVim option below [option] section
+[options]
+    # set spacevim theme. by default colorscheme layer is not loaded,
+    # if you want to use more colorscheme, please load the colorscheme
+    # layer
+    # colorscheme = "OceanicNext"
+    colorscheme = "jellybeans"
+    colorscheme_bg = "dark"
+    # Disable guicolors in basic mode, many terminal do not support 24bit
+    # true colors
+    enable_guicolors = true
+    # Disable statusline separator, if you want to use other value, please
+    # install nerd fonts
+    statusline_separator = "arrow"
+    statusline_iseparator = "arrow"
+    buffer_index_type = 4
+    enable_tabline_filetype_icon = true
+    enable_statusline_mode = false
+    guifont = "Fira Code Retina:h12"
+    enable_vinfiler_gitstatus = true
+    default_indent = 4
+    expand_tab = true
+    project_rooter_outermost = false
+
+# Enable autocomplete layer
+[[layers]]
+name = 'autocomplete'
+auto_completion_return_key_behavior = "complete"
+auto_completion_tab_key_behavior = "smart"
+
+[[layers]]
+name = 'shell'
+default_position = 'top'
+default_height = 30
+
+[[layers]]
+name = "colorscheme"
+
+[[layers]]
+    name = "denite"
+
+[[layers]]
+  name = "checkers"
+  show_cursor_error = false
+
+[[layers]]
+    name = 'git'
+
+[[layers]]
+  name = "github"
+
+[[layers]]
+    name = 'VersionControl'
+
+# Language layers
+[[layers]]
+name = 'lang#python'
+python_interpreter = '/bin/python3'
+
+[[layers]]
+name = "lang#javascript"
+
+[[layers]]
+name = "lang#html"
+
+[[layers]]
+name = "lang#go"
+
+[[layers]]
+  name = "lang#graphql"
+
+[[layers]]
+  name = "lang#groovy"
+
+[[layers]]
+  name = "lang#markdown"
+
+[[layers]]
+  name = "lang#powershell"
+
+[[layers]]
+  name = "lang#puppet"
+
+[[layers]]
+  name = "lang#swift"
+
+[[layers]]
+  name = "lang#typescript"
+
+[[layers]]
+  name = "lang#vue"
+
+[[layers]]
+  name = "lang#xml"
+
+[[layers]]
+  name = "lang#c"
+  clang_executable = "/usr/bin/clang"
+  clang_flag = ['-I/user/include']
+  [layer.clang_std]
+    c = "c11"
+    cpp = "c++1z"
+    objc = "c11"
+    objcpp = "c++1z"
+
+[[layers]]
+  name = "lang#csharp"
+  highlight_types = 0
+
+[[layers]]
+  name = "lang#dart"
+
+[[layers]]
+  name = "lang#dockerfile"
+
+[[custom_plugins]]
+    name = "MaxMEllon/vim-jsx-pretty"
+    merged = false
+
+[[custom_plugins]]
+  repo = "mhartington/oceanic-next"
+  merged = 0
+

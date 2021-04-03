@@ -1,0 +1,24 @@
+2021-04-03 13:52:11,014 DEBUG    root            Loaded Command Group: ['gcloud', 'components']
+2021-04-03 13:52:11,020 DEBUG    root            Loaded Command Group: ['gcloud', 'components', 'install']
+2021-04-03 13:52:11,022 DEBUG    root            Running [gcloud.components.install] with arguments: [COMPONENT-IDS:8: "['kubectl', 'kustomize', 'appctl', 'app-engine-go', 'bigtable', 'nomos', 'skaffold', 'pkg']"]
+2021-04-03 13:52:11,023 DEBUG    root            (gcloud.components.install) You cannot perform this action because this Cloud SDK installation is managed by an external package manager.
+Please consider using a separate installation of the Cloud SDK created through the default mechanism described at: https://cloud.google.com/sdk/
+Traceback (most recent call last):
+  File "/opt/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 982, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/opt/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/opt/google-cloud-sdk/lib/surface/components/install.py", line 83, in Run
+    update_manager.Install(
+  File "/opt/google-cloud-sdk/lib/googlecloudsdk/core/updater/update_manager.py", line 892, in Install
+    return self.Update(
+  File "/opt/google-cloud-sdk/lib/googlecloudsdk/core/updater/update_manager.py", line 928, in Update
+    self._CheckIfDisabledAndThrowError(
+  File "/opt/google-cloud-sdk/lib/googlecloudsdk/core/updater/update_manager.py", line 553, in _CheckIfDisabledAndThrowError
+    raise UpdaterDisabledError(default_message)
+googlecloudsdk.core.updater.update_manager.UpdaterDisabledError: You cannot perform this action because this Cloud SDK installation is managed by an external package manager.
+Please consider using a separate installation of the Cloud SDK created through the default mechanism described at: https://cloud.google.com/sdk/
+
+2021-04-03 13:52:11,024 ERROR    root            (gcloud.components.install) You cannot perform this action because this Cloud SDK installation is managed by an external package manager.
+Please consider using a separate installation of the Cloud SDK created through the default mechanism described at: https://cloud.google.com/sdk/
+

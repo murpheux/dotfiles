@@ -1,9 +1,28 @@
-[push]
-	default = current
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = !gitk
+	p = push
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	glo = log --oneline --decorate --all --graph
+	glog = log --pretty=format:'%h%x09%an%x09%ad%x09%s'
+	sb = submodule
+        wdiff = diff --word-diff=color --unified=1
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ll = log --oneline
 [user]
 	name = Clement Onawole
 	email = dapo.onawole@gmail.com
-    signingKey = "3E00A9CE54BEBAD7"
+	signingKey = "3E00A9CE54BEBAD7"
+[push]
+	default = current
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -11,33 +30,12 @@
 	required = true
 [pull]
 	rebase = false
-[alias]
-    co = checkout
-	br = branch
-	ci = commit
-	st = status
-	unstage = reset HEAD --
-	last = log -1 HEAD
-	visual = !gitk
-	glo = log --oneline --decorate --all --graph
-	glog = log --pretty=format:'%h%x09%an%x09%ad%x09%s'
-	sb = submodule
-        wdiff = diff --word-diff=color --unified=1
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [gpg]
 	program = gpg
 [commit]
 	gpgSign = false
 [tag]
 	forceSignAnnotated = false
-[cola]
-	spellcheck = false
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-    process = git-lfs filter-process
 [http]
 	sslverify = false
 [diff]
