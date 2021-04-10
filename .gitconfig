@@ -17,6 +17,11 @@
 	lol = log --graph --decorate --pretty=oneline --abbrev-commit
 	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 	ll = log --oneline
+	rv = remote -v
+	d = diff
+	dv = difftool -t vimdiff -y
+	gl = config --global -l
+	se = !git rev-list --all | xargs git grep -F
 [user]
 	name = Clement Onawole
 	email = dapo.onawole@gmail.com
@@ -59,3 +64,5 @@
 	keepTemporaries = false
 [difftool]
 	prompt = false
+[help]
+	autocorrect = 20

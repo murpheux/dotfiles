@@ -275,12 +275,8 @@ alias speed='speedtest-cli --server 4637 --simple'
 source <(kubectl completion zsh)
 complete -F __start_kubectl kb
 
-#alias pbcopy='xclip -selection clipboard'
-#alias pbpaste='xclip -selection clipboard -o'
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-
-
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 alias kb='kubectl --kubeconfig=/home/murpheux/.kube/k8s-1-18-8-do-1-sfo2-1602808957989-kubeconfig.yaml'
 alias helm='helm --kubeconfig=/home/murpheux/.kube/k8s-1-18-8-do-1-sfo2-1602808957989-kubeconfig.yaml'
 
@@ -387,7 +383,3 @@ complete -o nospace -F /usr/local/bin/aliyun aliyun
 alias icat="kitty +kitten icat"
 
 
-
-export PATH=$PATH:/home/murpheux/bin
-
-source '/home/murpheux/lib/azure-cli/az.completion'
