@@ -1,3 +1,13 @@
+#			       #
+#  mmmmm  m   m   m mm  mmmm   # mm    mmm   m   m  m   m 
+#  # # #  #   #   #"  " #" "#  #"  #  #"  #  #   #   #m#  
+#  # # #  #   #   #     #   #  #   #  #""""  #   #   m#m  
+#  # # #  "mm"#   #     ##m#"  #   #  "#mm"  "mm"#  m" "m 
+#                       #                                 
+#                       "                                 
+#  Clement Onawole
+#  ln/murpheux fb/murpheux tw/murpheux
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -209,7 +219,9 @@ alias dcomp=docker-compose
 alias ptest='python3 -m pytest'
 
 
-alias whatismyip='dig +short myip.opendns.com @resolver1.opendns.com'
+#alias whatismyip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias whatismyip='wget -qO- http://ipecho.net/plain | xargs echo'
+alias whatismyipv6="host myip.opendns.com resolver1.opendns.com | grep 'myip.opendns.com has' | awk '{print \$5}'"
 alias vm='vboxmanage'
 
 # GO
@@ -324,10 +336,10 @@ alias kafkacfg=$KAFKA_BIN/'kafka-config.sh --bootstrap-server sclet:9092'
 
 export KAFKA_HOME=/home/murpheux/Apps
 
-eval $(thefuck --alias)
+#eval $(thefuck --alias)
 
-PATH="$HOME/.cargo/bin:$PATH"
-source $HOME/.cargo/env
+#PATH="$HOME/.cargo/bin:$PATH"
+#source $HOME/.cargo/env
 
 alias au='sudo apt update -y && sudo apt upgrade -y'
 alias reboot='sudo reboot'
@@ -386,8 +398,20 @@ complete -o nospace -F /usr/local/bin/aliyun aliyun
 
 alias icat="kitty +kitten icat"
 
-
+# Use lf to switch directories and bind it to ctrl-o
+lfcd () {
+    tmp="$(mktemp)"
+    lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
+    fi
+}
+bindkey -s '^o' 'lfcd\n'
 
 export PATH=$PATH:/home/murpheux/bin
 
 source '/home/murpheux/lib/azure-cli/az.completion'
+
+export EDITOR=vi
