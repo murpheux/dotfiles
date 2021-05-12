@@ -1,0 +1,1 @@
+{"Name":"murpheux-scarlet","Metadata":{"Description":"Scarlet Host"},"Endpoints":{"docker":{"Host":"ssh://murpheux@sclet","SkipTLSVerify":false}}}

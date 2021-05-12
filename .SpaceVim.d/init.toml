@@ -81,9 +81,6 @@ name = "lang#go"
   name = "lang#groovy"
 
 [[layers]]
-  name = "lang#markdown"
-
-[[layers]]
   name = "lang#powershell"
 
 [[layers]]

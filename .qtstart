@@ -14,26 +14,11 @@ fi
 ## Start picom
 picom -CGb --experimental-backend &
 
-## Polkit authentication
-#/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
-
 ## screen extention
 xrandr --output DP2 --auto --right-of DP1
 
 ## Launch nitrogen before launching plank
 nitrogen --restore &
-
-## Status Bar
-# /home/steve/dwmscripts/dwmbar &
-
-## Set UK Keyboard
-#setxkbmap -layout gb &
-
-## Start notifications
-#dunst &
-
-## Start streamdeck_ui
-#streamdeck &
 
 ## kill conky
 killall conky

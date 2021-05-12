@@ -1,4 +1,5 @@
-#			       #
+#			                   #
+#			                   #
 #  mmmmm  m   m   m mm  mmmm   # mm    mmm   m   m  m   m 
 #  # # #  #   #   #"  " #" "#  #"  #  #"  #  #   #   #m#  
 #  # # #  #   #   #     #   #  #   #  #""""  #   #   m#m  
@@ -29,22 +30,22 @@ THEME_DELIMITER="%{$fg_bold[blue]%}›%{$reset_color%}%{$fg_bold[red]%}›%{$res
 # ----------------------------------
 # Colors
 # ----------------------------------
-NOCOLOR='\033[0m'
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHTGRAY='\033[0;37m'
-DARKGRAY='\033[1;30m'
-LIGHTRED='\033[1;31m'
-LIGHTGREEN='\033[1;32m'
-YELLOW='\033[1;33m'
-LIGHTBLUE='\033[1;34m'
-LIGHTPURPLE='\033[1;35m'
-LIGHTCYAN='\033[1;36m'
-WHITE='\033[1;37m'
+NOCOLOR='[0m'
+RED='[0;31m'
+GREEN='[0;32m'
+ORANGE='[0;33m'
+BLUE='[0;34m'
+PURPLE='[0;35m'
+CYAN='[0;36m'
+LIGHTGRAY='[0;37m'
+DARKGRAY='[1;30m'
+LIGHTRED='[1;31m'
+LIGHTGREEN='[1;32m'
+YELLOW='[1;33m'
+LIGHTBLUE='[1;34m'
+LIGHTPURPLE='[1;35m'
+LIGHTCYAN='[1;36m'
+WHITE='[1;37m'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -192,7 +193,7 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 alias npp="wine .wine/drive_c/Program\ Files/Notepad++/notepad++.exe"
 alias winscp="wine .wine/drive_c/Program\ Files/WinSCP/WinSCP.exe"
 
-alias path='echo -e ${PATH//:/\\n}'
+alias path='echo -e ${PATH//:/\n}'
 
 #Sublime Text
 alias sublime="open -a 'sublime text'"
@@ -301,7 +302,7 @@ random-string()
     cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w ${1:-32} | head -n 1
 }
 
-export DOCKER_HOST=scarlet
+#export DOCKER_HOST=scarlet
 
 export SMTP_PW=cG9ienhxaWZhcHpremZnZgo=
 export SENDGRID_API_KEY=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
@@ -408,10 +409,73 @@ lfcd () {
         [ -d "$dir" ] && [ "$dir" != "$(pwd)" ] && cd "$dir"
     fi
 }
-bindkey -s '^o' 'lfcd\n'
+bindkey -s '^o' 'lfcd
+'
 
-export PATH=$PATH:/home/murpheux/bin
+export PATH=$PATH:/home/murpheux/bin:/home/murpheux/lib/apps/bin
 
 source '/home/murpheux/lib/azure-cli/az.completion'
 
 export EDITOR=vi
+alias update='sudo pacman -Syu'
+alias upall='yay -Syu -noconfirm'
+
+# youtube-dl extract
+alias yta-aac=”youtube-dl –extract-audio –audio-format aac “
+alias yta-best=”youtube-dl –extract-audio –audio-format best “
+alias yta-flac=”youtube-dl –extract-audio –audio-format flac “
+alias yta-m4a=”youtube-dl –extract-audio –audio-format m4a “
+alias yta-mp3=”youtube-dl –extract-audio –audio-format mp3 “
+alias yta-opus=”youtube-dl –extract-audio –audio-format opus “
+alias yta-vorbis=”youtube-dl –extract-audio –audio-format vorbis “
+alias yta-wav=”youtube-dl –extract-audio –audio-format wav “
+alias ytv-best=”youtube-dl -f bestvideo+bestaudio “
+
+export PATH="$PATH:/home/murpheux/.dotnet/tools"
+source /usr/share/nvm/init-nvm.sh
+
+# Run something, muting output or redirecting it to the debug stream
+# depending on the value of _ARC_DEBUG.
+# If ARGCOMPLETE_USE_TEMPFILES is set, use tempfiles for IPC.
+__python_argcomplete_run() {
+    if [[ -z "${ARGCOMPLETE_USE_TEMPFILES-}" ]]; then
+        __python_argcomplete_run_inner "$@"
+        return
+    fi
+    local tmpfile="$(mktemp)"
+    _ARGCOMPLETE_STDOUT_FILENAME="$tmpfile" __python_argcomplete_run_inner "$@"
+    local code=$?
+    cat "$tmpfile"
+    rm "$tmpfile"
+    return $code
+}
+
+__python_argcomplete_run_inner() {
+    if [[ -z "${_ARC_DEBUG-}" ]]; then
+        "$@" 8>&1 9>&2 1>/dev/null 2>&1
+    else
+        "$@" 8>&1 9>&2 1>&9 2>&1
+    fi
+}
+
+_python_argcomplete() {
+    local IFS=$'\013'
+    local SUPPRESS_SPACE=0
+    if compopt +o nospace 2> /dev/null; then
+        SUPPRESS_SPACE=1
+    fi
+    COMPREPLY=( $(IFS="$IFS" \
+                  COMP_LINE="$COMP_LINE" \
+                  COMP_POINT="$COMP_POINT" \
+                  COMP_TYPE="$COMP_TYPE" \
+                  _ARGCOMPLETE_COMP_WORDBREAKS="$COMP_WORDBREAKS" \
+                  _ARGCOMPLETE=1 \
+                  _ARGCOMPLETE_SUPPRESS_SPACE=$SUPPRESS_SPACE \
+                  __python_argcomplete_run "$1") )
+    if [[ $? != 0 ]]; then
+        unset COMPREPLY
+    elif [[ $SUPPRESS_SPACE == 1 ]] && [[ "${COMPREPLY-}" =~ [=/:]$ ]]; then
+        compopt -o nospace
+    fi
+}
+complete -o nospace -o default -o bashdefault -F _python_argcomplete airflow
