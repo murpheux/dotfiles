@@ -14,6 +14,7 @@ ansible
 arch-install-scripts
 asciiquarium
 aspnet-runtime
+audacity
 autoconf
 automake
 autorandr
@@ -31,6 +32,7 @@ btrfs-progs
 buildah
 bullshit
 bzip2
+chkrootkit
 cmatrix
 cmus
 code
@@ -136,6 +138,7 @@ jre-openjdk-headless
 kitty
 kubectl
 kubectx
+lbry-app-bin
 less
 lib32-libva-intel-driver
 lib32-libva-mesa-driver
@@ -164,6 +167,7 @@ lolcat
 lsb-release
 lsof
 lvm2
+lynx
 m4
 maim
 make
@@ -197,11 +201,12 @@ moc
 modemmanager
 mono
 mousepad
+mpc
+mpd
 mpv
 mtools
 mtpfs
 mugshot
-nano
 neofetch
 neovim
 net-tools
@@ -221,12 +226,17 @@ nss-mdns
 ntfs-3g
 ntp
 numlockx
+nvm
+obs-studio
 openresolv
 openssh
+origin-client
 os-prober
 p7zip
 pacman
 pamac-gtk
+pandoc
+paprefs
 parole
 patch
 pavucontrol
@@ -251,6 +261,7 @@ qpdfview
 qtile
 qutebrowser
 rambox-bin
+reaper-bin
 reiserfsprogs
 remmina
 robo3t-bin
@@ -292,6 +303,7 @@ thunar-media-tags-plugin
 thunar-volman
 tlp
 toilet-fonts
+traceroute
 trash-cli
 tree
 ttf-dejavu
