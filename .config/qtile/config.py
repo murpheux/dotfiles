@@ -125,8 +125,8 @@ keys = [
 
     # Move windows to different physical screens
 
-    Key([mod, "shift"], "period", lazy.function(window_to_previous_screen)),
-    Key([mod, "shift"], "comma", lazy.function(window_to_next_screen)),
+    Key([mod, "shift"], "comma", lazy.function(window_to_previous_screen)),
+    Key([mod, "shift"], "period", lazy.function(window_to_next_screen)),
     Key([mod], "t", lazy.function(switch_screens)),
 
     # Custom/App key bindiNGS
@@ -142,6 +142,7 @@ keys = [
     Key([mod, "mod1"], "e", lazy.spawn("microsoft-edge-dev")),
     Key([mod, "mod1"], "f", lazy.spawn("kitty -e vifm ~/Documents ~/Downloads")),
     Key([mod, "mod1"], "g", lazy.spawn("gimp")),
+    Key([mod, "mod1"], "h", lazy.spawn("bleachbit")),
     Key([mod, "mod1"], "i", lazy.spawn("nitrogen")),
     Key([mod, "mod1"], "k", lazy.spawn("inkscape")),
     Key([mod, "mod1"], "v", lazy.spawn("vlc -q --no-one-instance")),
@@ -152,6 +153,7 @@ keys = [
     Key([mod, "mod1"], "s", lazy.spawn("obs")),
     Key([mod, "mod1"], "t", lazy.spawn("thunar")),
     Key([mod, "mod1"], "u", lazy.spawn("audacity")),
+    #Key([mod, "mod1"], "v", lazy.spawn("vivaldi")),
     Key([mod, "mod1"], "m", lazy.spawn("remmina")),
     Key([mod, "mod1"], "w", lazy.spawn("libreoffice --writer")),
     Key([mod, "mod1"], "x", lazy.spawn("libreoffice --calc")),
@@ -267,7 +269,7 @@ layouts = [
     layout.Max(**layout_theme),
     layout.Stack(num_stacks=2),
     layout.RatioTile(**layout_theme),
-    layout.TreeTab(font="Ubuntu", fontsize=10, sections=["FIRST", "SECOND", "THIRD", "FOURTH"], section_fontsize=10, border_width=2,
+    layout.TreeTab(font="UbuntuMono Nerd Font", fontsize=10, sections=["FIRST", "SECOND", "THIRD", "FOURTH"], section_fontsize=10, border_width=2,
                    bg_color="1c1f24", active_bg="c678dd", active_fg="000000", inactive_bg="a9a1e1", inactive_fg="1c1f24", padding_left=0,
                    padding_x=0, padding_y=5, section_top=10, section_bottom=20, level_shift=8, vspace=3, panel_width=200),
     layout.Floating(**layout_theme)
@@ -289,7 +291,7 @@ prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 ##### DEFAULT WIDGET SETTINGS #####
 widget_defaults = dict(
-    font="Ubuntu Mono",
+    font="UbuntuMono Nerd Font",
     fontsize=12,
     padding=2,
     background=colors[2]
@@ -305,9 +307,9 @@ def init_widgets_list():
                      mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(myTerm)}),
         widget.Sep(linewidth=0, padding=6,
                    foreground=colors[2], background=colors[0]),
-        widget.GroupBox(font="Ubuntu Bold", fontsize=9, margin_y=3, margin_x=0, padding_y=5, padding_x=3, borderwidth=3, active=colors[2], inactive=colors[7], rounded=False, highlight_color=colors[1], highlight_method="line",
+        widget.GroupBox(font="UbuntuMono Nerd Font Bold", fontsize=9, margin_y=3, margin_x=0, padding_y=5, padding_x=3, borderwidth=3, active=colors[2], inactive=colors[7], rounded=False, highlight_color=colors[1], highlight_method="line",
                         this_current_screen_border=colors[6], this_screen_border=colors[4], other_current_screen_border=colors[6], other_screen_border=colors[4], foreground=colors[2], background=colors[0]),
-        widget.Prompt(prompt=prompt, font="Ubuntu Mono", padding=10,
+        widget.Prompt(prompt=prompt, font="UbuntuMono Nerd Font", padding=10,
                       foreground=colors[3], background=colors[1]),
         widget.Sep(linewidth=0, padding=40,
                    foreground=colors[2], background=colors[0]),

@@ -1,0 +1,151 @@
+#			                  #
+#			                  #
+#  mmmmm  m   m   m mm  mmmm   # mm    mmm   m   m  m   m 
+#  # # #  #   #   #"  " #" "#  #"  #  #"  #  #   #   #m#  
+#  # # #  #   #   #     #   #  #   #  #""""  #   #   m#m  
+#  # # #  "mm"#   #     ##m#"  #   #  "#mm"  "mm"#  m" "m 
+#                       #                                 
+#                       "                                 
+#  Clement Onawole
+#  ln/murpheux fb/murpheux tw/murpheux
+#
+
+
+set ssl_force_tls = yes
+set abort_nosubject = no
+set mail_check = 60
+set timeout = 10
+set sort = "reverse-date-received"
+set signature = "~/.config/mutt/signature"
+set copy = no
+
+set editor="vim"
+
+# Caching and such
+set message_cachedir='~/.mutt/cache/bodies'
+set header_cache = "~/.mutt/cache/headers"
+#set certificate_file='~/.mutt/certificates'
+
+set from = "dapo.onawole@gmail.com"
+set realname = "Clement Onawole"
+
+# Imap settings
+set imap_user = "dapo.onawole@gmail.com"
+set imap_pass = $GMAIL_PASS
+
+# Smtp settings
+set smtp_url = "smtps://dapo.onawole@smtp.gmail.com"
+set smtp_pass = $GMAIL_PASS
+
+# Remote gmail folders
+set folder = "imaps://imap.gmail.com/"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set trash = "+[Gmail]/Trash"
+
+macro index gd "<change-folder>$postponed<enter>" "go to drafts"
+macro index gs "<change-folder>$record<enter>" "go to sent"
+macro index gi "<change-folder>$spoolfile<Enter>" "go to inbox"
+macro index gt "<change-folder>$trash<enter>" "go to trash""
+
+# Source account hooks with authorization data 
+# we put some hooks with our credentials in here for each account.  They need to look like this:
+# account-hook imaps://USER@SERVER 'set imap_user=USER imap_pass=PASSWORD smtp_pass=PASSWORD'
+# See http://pthree.org/2012/01/07/encrypted-mutt-imap-smtp-passwords/ for more on encrypting this.
+# If you choose not to encrypt it, then maybe:
+# source ~/.mutt/auth.hooks
+
+#source ~/.mutt/auth.hooks
+
+# Make Google SMTP work with Yosemite
+#set smtp_authenticators = 'gssapi:login'
+
+# Start off with a given profile: Uncomment this to start with a specific 
+# profile, or set an alias to pick your preferred profile at startup, e.g.
+# alias mutt = "mutt -e 'source ~/.mutt/profile.puppet'
+#source ~/.mutt/puppet.profile
+#source ~/.mutt/personal.profile
+
+
+
+# Source our macros, scores
+#source ~/.mutt/macros
+#source ~/.mutt/scores
+#source ~/.mutt/dracula.mutt
+
+# aliases
+#set alias_file=~/.mutt/aliases
+#source ~/.mutt/aliases
+
+# Caching and such
+#set message_cachedir='~/.mutt/cache/bodies'
+#set header_cache = "~/.mutt/cache/headers"
+#set certificate_file='~/.mutt/certificates'
+
+# I don't want to be prompted to press keys after piping messages
+#set wait_key=no
+
+# Misc stuff I ate off the sidewalk that has not made me sick so far
+#set allow_ansi=yes
+#set text_flowed=yes
+#set use_from=yes
+#set envelope_from=yes
+#set delete=yes
+#set wrap=80
+
+# Who is me?
+#alternates  "mph@puddingbowl.org|mike.hall@puppet.com|pdxmph@gmail.com|mike@bothpieces.com|m@pdbl.org|michael.hall@puppetlabs.com"
+
+# Make stuff show the way we want when viewing a message ...
+
+# Show plaintext message parts in preference of html ones
+alternative_order text/plain
+
+# but show html rendered with our mailcap entry when we select that part for viewing
+auto_view text/html
+
+#set markers=no
+#set smart_wrap
+
+# Fix up the headers we see
+#ignore *
+#unignore list-unsubscribe date: from subject To
+#hdr_order To List-Unsubscribe Date: From Subject 
+
+# Index View Options ---------------------------------
+#set date_format = "%m/%d"
+#set index_format = "[%Z] [%2N]  %D  %-20.20F  %s"
+#set sort = threads                         # like gmail
+#set sort_aux = reverse-last-date-received  # like gmail
+#set uncollapse_jump                        # don't collapse on an unread message
+#set sort_re                                # thread based on regex
+#set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+
+# Customize reply attribution
+
+#set attribution = "On %{%A, %B %e, %Y}, %n <%a> wrote:\n"
+
+# Some editing options
+#set edit_headers = no
+#set autoedit
+#set text_flowed=yes
+
+# False prophets!
+#set editor = "/usr/bin/vim -c':set spell'"
+#set editor="vim \"+set nonumber\" \"+set spell\" \"+set filetype=mail\" +/^$/"
+
+# There is only one editor 
+#set editor = "/usr/local/bin/emacsclient  -t -nw"
+
+
+# Address book stuff
+# set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
+
+#set query_command = "lbdbq %s 2>/dev/null"
+
+# we'll use goobook, since it has all my contacts.
+# pip install goobook, then configure the netrc per https://pypi.python.org/pypi/goobook/1.6
+#set query_command="/usr/local/bin/goobook query '%s'"
+#bind editor <Tab> complete-query
+#bind editor ^T    complete
