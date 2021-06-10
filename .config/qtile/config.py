@@ -59,23 +59,20 @@ def switch_screens(qtile):
 keys = [
     # The essentials
 
-    Key([mod], "Return", lazy.spawn(myTerm+" -e zsh"),
-        desc='Launches My Terminal'),
-    Key([mod, "shift"], "Return", lazy.spawn(
-        "dmenu_run -p 'Run: '"), desc='Run Launcher'),
+    Key([mod], "Return", lazy.spawn(myTerm+" -e zsh"), desc='Launches My Terminal'),
+    Key([mod, "shift"], "Return", lazy.spawn( "dmenu_run -p 'Run: '"), desc='Run Launcher'),
     Key([mod], "Tab", lazy.next_layout(), desc='Toggle through layouts'),
     Key([mod, "shift"], "c", lazy.window.kill(), desc='Kill active window'),
     Key([mod, "shift"], "r", lazy.restart(), desc='Restart Qtile'),
     Key([mod, "shift"], "q", lazy.shutdown(), desc='Shutdown Qtile'),
     Key([mod2, "shift"], "v", lazy.spawn("vi"), desc='Vim'),
-    Key([mod2, "shift"], "e", lazy.spawn(
-        "emacsclient -c -a emacs"), desc='Doom Emacs'),
+    Key([mod2, "shift"], "e", lazy.spawn( "emacsclient -c -a emacs"), desc='Doom Emacs'),
 
     # Switch focus to specific monitor (out of two)
 
     Key([mod], "w", lazy.to_screen(0), desc='Keyboard focus to monitor 1'),
     Key([mod], "e", lazy.to_screen(1), desc='Keyboard focus to monitor 2'),
-    Key([mod], "r", lazy.to_screen(2), desc='Keyboard focus to monitor 3'),
+    #Key([mod], "r", lazy.to_screen(2), desc='Keyboard focus to monitor 3'),
 
     # Switch focus of monitors
 
@@ -145,7 +142,6 @@ keys = [
     Key([mod, "mod1"], "h", lazy.spawn("bleachbit")),
     Key([mod, "mod1"], "i", lazy.spawn("nitrogen")),
     Key([mod, "mod1"], "k", lazy.spawn("inkscape")),
-    Key([mod, "mod1"], "v", lazy.spawn("vlc -q --no-one-instance")),
     Key([mod, "mod1"], "e", lazy.spawn("kitty -e vi")),
     Key([mod, "mod1"], "o", lazy.spawn("postman")),
     Key([mod, "mod1"], "p", lazy.spawn("brave --incognito")),
@@ -153,7 +149,7 @@ keys = [
     Key([mod, "mod1"], "s", lazy.spawn("obs")),
     Key([mod, "mod1"], "t", lazy.spawn("thunar")),
     Key([mod, "mod1"], "u", lazy.spawn("audacity")),
-    #Key([mod, "mod1"], "v", lazy.spawn("vivaldi")),
+    Key([mod, "mod1"], "v", lazy.spawn("vlc -q --no-one-instance")),
     Key([mod, "mod1"], "m", lazy.spawn("remmina")),
     Key([mod, "mod1"], "w", lazy.spawn("libreoffice --writer")),
     Key([mod, "mod1"], "x", lazy.spawn("libreoffice --calc")),
@@ -162,17 +158,13 @@ keys = [
 
     # Volume keys
 
-    Key([], "XF86AudioMute", lazy.spawn(
-        "amixer -D pulse sset Master toggle")),
-    Key([], "XF86AudioLowerVolume", lazy.spawn(
-        "amixer -D pulse sset Master 5%-")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn(
-        "amixer -D pulse sset Master 5%+")),
+    Key([], "XF86AudioMute", lazy.spawn( "amixer -D pulse sset Master toggle")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn( "amixer -D pulse sset Master 5%-")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn( "amixer -D pulse sset Master 5%+")),
 
     # SCREENSHOTS
 
-    Key([], "Print", lazy.spawn(
-        "scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'")),
+    Key([], "Print", lazy.spawn( "scrot 'ArcoLinux-%Y-%m-%d-%s_screenshot_$wx$h.jpg' -e 'mv $f $$(xdg-user-dir PICTURES)'")),
     Key([mod2], "Print", lazy.spawn('xfce4-screenshooter')),
     Key([mod2, "shift"], "Print", lazy.spawn('gnome-screenshot -i')),
 
@@ -291,12 +283,46 @@ prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
 
 ##### DEFAULT WIDGET SETTINGS #####
 widget_defaults = dict(
-    font="UbuntuMono Nerd Font",
-    fontsize=12,
+    font="UbuntuMono Nerd Font Bold",
+    fontsize=14,
     padding=2,
     background=colors[2]
 )
 extension_defaults = widget_defaults.copy()
+
+def init_widgets_basic():
+    widgets_list = [
+        widget.Sep(linewidth=0, padding=6,
+                   foreground=colors[2], background=colors[0]),
+        widget.Image(filename="~/.config/qtile/icons/manjaro_maia_32x32.png", scale="False",
+                     mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(myTerm)}),
+        widget.Sep(linewidth=0, padding=6,
+                   foreground=colors[2], background=colors[0]),
+        widget.GroupBox(font="UbuntuMono Nerd Font Bold", fontsize=9, margin_y=3, margin_x=0, padding_y=5, padding_x=3, borderwidth=3, active=colors[2], inactive=colors[7], rounded=False, highlight_color=colors[1], highlight_method="line",
+                        this_current_screen_border=colors[6], this_screen_border=colors[4], other_current_screen_border=colors[6], other_screen_border=colors[4], foreground=colors[2], background=colors[0]),
+        widget.Prompt(prompt=prompt, font="UbuntuMono Nerd Font", padding=10,
+                      foreground=colors[3], background=colors[1]),
+        widget.Sep(linewidth=0, padding=40,
+                   foreground=colors[2], background=colors[0]),
+        widget.WindowName(
+            foreground=colors[6], background=colors[0], padding=0),
+        widget.Sep(linewidth=0, padding=6,
+                   foreground=colors[0], background=colors[0]),
+        widget.TextBox(
+            text='', background=colors[0], foreground=colors[5], padding=0, fontsize=37),
+        widget.TextBox(
+            text=" 🔉", foreground=colors[2], background=colors[5], padding=0, fontsize=14),
+        widget.TextBox(
+            text=" Vol:", foreground=colors[2], background=colors[5], padding=0),
+        widget.Volume(foreground=colors[2], background=colors[5], padding=5),
+        widget.TextBox(
+            text='', background=colors[5], foreground=colors[4], padding=0, fontsize=37),
+        widget.CurrentLayoutIcon(custom_icon_paths=[os.path.expanduser(
+            "~/.config/qtile/icons")], foreground=colors[0], background=colors[4], padding=0, scale=0.7),
+        widget.CurrentLayout(
+            foreground=colors[2], background=colors[4], padding=5),
+    ]
+    return widgets_list
 
 
 def init_widgets_list():
@@ -329,7 +355,7 @@ def init_widgets_list():
         widget.TextBox(text=" 🌡 ", padding=2,
                        foreground=colors[2], background=colors[5], fontsize=11),
         widget.ThermalSensor(
-            metric=True, padding=2, foreground=colors[2], background=colors[5], fontsize=11),
+            metric=True, padding=2, foreground=colors[2], background=colors[5]),
         widget.TextBox(
             text='', background=colors[5], foreground=colors[4], padding=0, fontsize=37),
         widget.TextBox(text=" ⟳", padding=2,
@@ -346,7 +372,8 @@ def init_widgets_list():
             text='', background=colors[5], foreground=colors[4], padding=0, fontsize=37),
         widget.TextBox(text=" 🏢", padding=0,
                        foreground=colors[2], background=colors[4], fontsize=12),
-        widget.CPU(foreground=colors[2], background=colors[4], padding=5),
+        widget.CPU(foreground=colors[2], background=colors[4], mouse_callbacks={
+                      'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e neofetch')}, padding=5),
         widget.TextBox(
             text='', background=colors[4], foreground=colors[5], padding=0, fontsize=37),
         widget.TextBox(
@@ -371,9 +398,7 @@ def init_widgets_list():
 
 
 def init_widgets_screen1():
-    widgets_screen1 = init_widgets_list()
-    # Slicing removes unwanted widgets (systray) on Monitors 1
-    del widgets_screen1[7:8]
+    widgets_screen1 = init_widgets_basic()
     return widgets_screen1
 
 

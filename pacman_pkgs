@@ -25,6 +25,9 @@ banner
 bash-completion
 bind
 bison
+bitwarden
+bitwarden-cli-bin
+bleachbit
 blueman
 bpytop
 brave
@@ -65,12 +68,14 @@ dropbox
 e2fsprogs
 ecryptfs-utils
 efibootmgr
+emacs
 engrampa
 etcher
 exfat-utils
 exo
 f2fs-tools
 fakeroot
+fd
 ffmpeg
 ffmpegthumbnailer
 figlet
@@ -118,6 +123,8 @@ gzip
 haveged
 helm
 hollywood
+hyperfine
+i3-gaps
 iat
 inetutils
 inkscape
@@ -130,11 +137,14 @@ iputils
 ipw2100-fw
 ipw2200-fw
 irssi
+ix
 jdk-openjdk
 jfsutils
 jq
 jre-openjdk
 jre-openjdk-headless
+kdenlive
+keybase-bin
 kitty
 kubectl
 kubectx
@@ -169,6 +179,7 @@ lsof
 lvm2
 lynx
 m4
+macchanger
 maim
 make
 man-db
@@ -199,6 +210,8 @@ mkinitcpio-openswap
 mobile-broadband-provider-info
 moc
 modemmanager
+mongodb-bin
+mongodb-tools-bin
 mono
 mousepad
 mpc
@@ -207,6 +220,7 @@ mpv
 mtools
 mtpfs
 mugshot
+mutt
 neofetch
 neovim
 net-tools
@@ -219,6 +233,7 @@ networkmanager-vpnc
 nfs-utils
 nitrogen
 nmap
+no-more-secrets
 nodejs
 noto-fonts
 npm
@@ -229,6 +244,7 @@ numlockx
 nvm
 obs-studio
 openresolv
+openshift-source-to-image
 openssh
 origin-client
 os-prober
@@ -238,6 +254,8 @@ pamac-gtk
 pandoc
 paprefs
 parole
+paru
+pass
 patch
 pavucontrol
 pciutils
@@ -248,6 +266,7 @@ picom
 pkgconf
 podman
 poppler-glib
+postgresql
 postman-bin
 powertop
 procps-ng
@@ -255,6 +274,7 @@ psmisc
 pulseaudio-bluetooth
 pulseaudio-ctl
 pulseaudio-zeroconf
+pwgen
 python-pip
 qalculate-gtk
 qpdfview
@@ -276,6 +296,7 @@ screen
 screenfetch
 screenkey
 scrot
+seahorse
 sed
 shadow
 shell-color-scripts
@@ -294,6 +315,7 @@ systemd-fsck-silent
 systemd-sysvcompat
 tar
 tcpdump
+teams
 terminus-font
 terraform
 texinfo
@@ -322,9 +344,11 @@ vagrant
 vi
 vifm
 vim
+vivaldi
 vlc
 vulkan-intel
 vulkan-radeon
+w3m
 wget
 which
 whois

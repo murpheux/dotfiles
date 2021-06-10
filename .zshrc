@@ -483,3 +483,7 @@ complete -o nospace -o default -o bashdefault -F _python_argcomplete airflow
 
 # Gmail mutt
 export GMAIL_PASS=$(gpg --textmode -d ~/.cred/gmail/cred.gpg)
+
+eval "$(bw completion --shell zsh); compdef _bw bw;"
+
+#source ~/zsh-autocomplete/zsh-autocomplete.plugin.zsh

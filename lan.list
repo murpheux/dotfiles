@@ -1,0 +1,27 @@
+# Devices
+10.10.2.1	    router0	    softcraftrouter0    modem       defaultgw       gateway         gw
+10.10.2.2       switch0     softcraftswitch0
+
+# Services
+10.10.2.7	    pihole1	    softcraftdns1	    pidns1	    dns1
+10.10.2.9	    pihole2	    softcraftdns2	    pidns2	    dns2
+
+10.10.2.88	    printer     softcraftprn
+10.10.2.99      storage     softcraftstorage    backup	    timecapsule	    tcapsule
+
+# HW Servers
+10.10.2.80	    softcraftscarlet                scarlet     sclet
+10.10.2.82	    softcraftdru		            dru     
+10.10.2.84	    softcraftgru		            gru     
+
+# Dev Machines
+10.10.2.66	    softcraftjosh		            josh
+10.10.2.64	    softcraftphil   	            phil
+10.10.2.68      softcraftwinibk		            winibk
+10.10.2.60      softcraftmacairfi   	        macairfi
+
+10.10.2.62	    softcraftmacairm1	            macairm1	airm1
+10.10.2.41      softcraftcassandra   	        cassandra   cass
+10.10.2.42	    softcraftcassandra2	            cassandra2	cass2
+10.10.2.48	    nttwin                          winntt
+

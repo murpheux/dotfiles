@@ -12,7 +12,8 @@
     # if you want to use more colorscheme, please load the colorscheme
     # layer
     # colorscheme = "OceanicNext"
-    colorscheme = "jellybeans"
+    # colorscheme = "jellybeans"
+    colorscheme = "gruvbox"
     colorscheme_bg = "dark"
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
@@ -124,5 +125,18 @@ name = "lang#go"
 
 [[custom_plugins]]
   repo = "mhartington/oceanic-next"
+  merged = 0
+
+[[custom_plugins]]
+  repo = "ryanoasis/vim-devicons"
+  merged = 0
+
+# telescope and icons
+[[custom_plugins]]
+  repo = "nvim-telescope/telescope.nvim"
+  merged = 0
+
+[[custom_plugins]]
+  repo = "kyazdani42/nvim-web-devicons"
   merged = 0
 
