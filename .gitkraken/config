@@ -1,0 +1,63 @@
+{
+  "lastUpgradeScriptRun": "v7.5.0",
+  "appId": "4a960bcd91c6067a880e5f70cae7406184091816",
+  "lastVersion": "7.6.1",
+  "lastReleaseNotesDisplayed": "7.6.1",
+  "windowSettings": {
+    "x": 2570,
+    "y": 30,
+    "width": 2540,
+    "height": 1400,
+    "fullScreen": false,
+    "maximized": false
+  },
+  "registration": {
+    "email": "dapo.onawole@gmail.com",
+    "name": "Clement Onawole",
+    "status": "activated",
+    "loginType": "github",
+    "date": "2021-06-17T16:13:59.438Z",
+    "EULA": {
+      "version": "7.5.0",
+      "status": "agree_verified"
+    }
+  },
+  "userId": "7530732b-8828-4604-9087-6b975795f387",
+  "licensedFeatures": [],
+  "userFeatures": [
+    {
+      "name": "gitkraken"
+    },
+    {
+      "name": "glo"
+    },
+    {
+      "name": "timelines"
+    }
+  ],
+  "keepGitConfigInSyncWithProfile": false,
+  "hasSeenNewUserOnboarding": true,
+  "fuzzyFinderMetadata": {
+    "itemMetadata": {
+      "OPEN_REPO": {
+        "openRepo-/home/murpheux/Workspace/Projects/bcparks": {
+          "id": "openRepo-/home/murpheux/Workspace/Projects/bcparks",
+          "timestamps": [
+            1623946651470
+          ],
+          "total": 1
+        },
+        "openRepo-/home/murpheux/Workspace/Projects/dgiini": {
+          "id": "openRepo-/home/murpheux/Workspace/Projects/dgiini",
+          "timestamps": [
+            1623946796735
+          ],
+          "total": 1
+        }
+      }
+    }
+  },
+  "commits": {
+    "maxCommitsInGraph": 2000
+  }
+}

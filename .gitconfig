@@ -25,7 +25,7 @@
 [user]
 	name = Clement Onawole
 	email = dapo.onawole@gmail.com
-	signingKey = "3E00A9CE54BEBAD7"
+	signingkey = 6D5DE597C5D7AC22BFDFB02A2FDFBB5B915D7595
 [push]
 	default = current
 [filter "lfs"]
@@ -38,7 +38,7 @@
 [gpg]
 	program = gpg
 [commit]
-	gpgSign = false
+	gpgsign = true
 [tag]
 	forceSignAnnotated = false
 [http]

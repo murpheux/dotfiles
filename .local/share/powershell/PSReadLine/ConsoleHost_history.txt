@@ -1,0 +1,13 @@
+exils
+ls
+powd
+pwd
+ls
+cls
+exit
+echo $0
+PSVersionTable
+exit
+write-host 'u{1F600}'
+write-host `u{1F600}
+exit

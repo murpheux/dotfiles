@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/murpheux/Dropbox/New%20Resume/Clement_Resume_net%20-%20google.docx" added="2021-05-15T02:46:22.883206Z" modified="2021-06-16T14:35:53.857146Z" visited="2021-05-15T02:46:22.883207Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-16T14:22:56.037276Z" count="11"/>
+          <bookmark:application name="LibreOffice 7.1" exec="&apos;soffice %u&apos;" modified="2021-06-16T14:35:53.857144Z" count="9"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/Anon" added="2021-05-18T18:54:25.158144Z" modified="2021-05-18T18:54:25.158149Z" visited="2021-05-18T18:54:25.158145Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="nitrogen" exec="&apos;nitrogen %u&apos;" modified="2021-05-18T18:54:25.158146Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Documents/Credit_Score.pdf" added="2021-05-18T19:53:23.897945Z" modified="2021-05-18T19:53:23.897955Z" visited="2021-05-18T19:53:23.897947Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/pdf"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-05-18T19:53:23.897950Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/6ab71b9d823f9d0893014e4c1abe106f.jpg" added="2021-05-18T21:28:27.233806Z" modified="2021-05-18T21:28:27.233812Z" visited="2021-05-18T21:28:27.233807Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-05-18T21:28:27.233809Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/download.jpeg" added="2021-05-18T21:30:48.919894Z" modified="2021-05-18T21:30:48.919903Z" visited="2021-05-18T21:30:48.919895Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-05-18T21:30:48.919898Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/anon.jpeg" added="2021-05-18T21:32:11.245927Z" modified="2021-05-19T15:55:19.172257Z" visited="2021-05-18T21:32:11.245929Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-05-19T15:55:19.172253Z" count="8"/>
+          <bookmark:application name="vivaldi-stable" exec="&apos;vivaldi-stable %u&apos;" modified="2021-05-19T02:18:59.670295Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/anon2.jpg" added="2021-05-19T00:08:47.856269Z" modified="2021-05-19T17:41:55.658889Z" visited="2021-05-19T00:08:47.856270Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-05-19T17:41:55.658883Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Downloads/BC%20Parks%20CMS%20Data%20Model.xlsx" added="2021-05-21T16:02:20.810407Z" modified="2021-06-10T22:14:04.027389Z" visited="2021-05-21T16:02:20.810408Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 7.1" exec="&apos;soffice %u&apos;" modified="2021-06-10T22:14:04.027385Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/incognito.jpeg" added="2021-05-22T00:29:26.787346Z" modified="2021-06-05T22:45:13.587292Z" visited="2021-05-22T00:29:26.787347Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-05T22:45:13.587287Z" count="21"/>
+          <bookmark:application name="rambox" exec="&apos;rambox %u&apos;" modified="2021-05-22T22:42:03.313938Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Workspace/Projects/bcparks/src/etl/src/airflow-data/data.json" added="2021-05-25T16:27:22.797426Z" modified="2021-05-25T16:27:22.797438Z" visited="2021-05-25T16:27:22.797427Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/json"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-05-25T16:27:22.797432Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Workspace/Projects/bcparks/src/etl/airflow-data/data.json" added="2021-05-25T18:03:49.120023Z" modified="2021-06-16T18:21:28.022977Z" visited="2021-05-25T18:03:49.120024Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/json"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-16T18:21:28.022972Z" count="5"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Downloads/Parks%20-%20Technical%20Architecture.pptx" added="2021-05-25T18:30:12.261401Z" modified="2021-06-07T16:12:46.835400Z" visited="2021-05-25T18:30:12.261402Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.presentationml.presentation"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 7.1" exec="&apos;soffice %u&apos;" modified="2021-06-07T16:12:46.835395Z" count="6"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Dropbox/Main_Resume" added="2021-05-25T20:19:18.884019Z" modified="2021-05-25T20:19:18.884025Z" visited="2021-05-25T20:19:18.884020Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 7.1" exec="&apos;soffice %u&apos;" modified="2021-05-25T20:19:18.884022Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Dropbox/Main_Resume.docx" added="2021-05-25T20:19:34.143361Z" modified="2021-05-25T20:59:55.028856Z" visited="2021-05-25T20:19:34.143362Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>
+        <bookmark:applications>
+          <bookmark:application name="LibreOffice 7.1" exec="&apos;soffice %u&apos;" modified="2021-05-25T20:59:55.028855Z" count="6"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Downloads/MX-19.4_x64.iso" added="2021-06-01T01:05:07.539657Z" modified="2021-06-01T01:05:07.684828Z" visited="2021-06-01T01:05:07.539658Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-cd-image"/>
+        <bookmark:applications>
+          <bookmark:application name="Engrampa" exec="&apos;engrampa&apos;" modified="2021-06-01T01:05:07.684822Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/IBM/techsalesprocess.png" added="2021-06-02T03:03:11.329016Z" modified="2021-06-02T03:03:11.329025Z" visited="2021-06-02T03:03:11.329018Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-02T03:03:11.329021Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/IBM/salre.png" added="2021-06-02T03:21:33.762998Z" modified="2021-06-02T03:21:33.763005Z" visited="2021-06-02T03:21:33.762999Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-02T03:21:33.763002Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/IBM/k8cri.png" added="2021-06-02T03:45:51.822634Z" modified="2021-06-02T03:46:49.293349Z" visited="2021-06-02T03:45:51.822635Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-02T03:46:49.293344Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/IBM/6rstrategy.png" added="2021-06-02T13:04:08.868709Z" modified="2021-06-02T13:04:08.868715Z" visited="2021-06-02T13:04:08.868711Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-02T13:04:08.868712Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/IBM/osi.png" added="2021-06-02T15:03:51.025093Z" modified="2021-06-02T15:03:51.025101Z" visited="2021-06-02T15:03:51.025094Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-02T15:03:51.025097Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/IBM/devops.png" added="2021-06-02T18:23:42.554031Z" modified="2021-06-02T18:23:42.554039Z" visited="2021-06-02T18:23:42.554032Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-02T18:23:42.554035Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/IBM/openshift.png" added="2021-06-02T18:25:40.433474Z" modified="2021-06-02T18:25:40.433479Z" visited="2021-06-02T18:25:40.433474Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-02T18:25:40.433476Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///mnt/volume03/linux_iso/kali-linux-2021.2-live-arm64.iso" added="2021-06-04T15:35:08.031785Z" modified="2021-06-04T15:35:08.031790Z" visited="2021-06-04T15:35:08.031785Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-cd-image"/>
+        <bookmark:applications>
+          <bookmark:application name="electron" exec="&apos;electron %u&apos;" modified="2021-06-04T15:35:08.031787Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/prof_pix.jpg" added="2021-06-16T14:25:54.606943Z" modified="2021-06-16T22:38:41.207535Z" visited="2021-06-16T14:25:54.606946Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-16T22:38:41.207528Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Workspace/Projects/bcparks/src/etl/dags/run_par_etl.py" added="2021-06-16T18:16:30.259194Z" modified="2021-06-16T18:45:15.212806Z" visited="2021-06-16T18:16:30.259196Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-16T18:45:15.212803Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Workspace/Projects/bcparks/src/etl/dags/utils.py" added="2021-06-16T18:16:30.259223Z" modified="2021-06-16T18:45:15.212821Z" visited="2021-06-16T18:16:30.259224Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/x-python"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-16T18:45:15.212819Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Workspace/Projects/bcparks/src/etl/deploy/dev/data.json" added="2021-06-16T18:42:42.047132Z" modified="2021-06-16T18:42:42.047143Z" visited="2021-06-16T18:42:42.047133Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/json"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-16T18:42:42.047137Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/prof_sm.jpg" added="2021-06-16T22:38:41.207587Z" modified="2021-06-16T22:38:41.207596Z" visited="2021-06-16T22:38:41.207588Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-16T22:38:41.207592Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Pictures/scrn_shot.png" added="2021-06-16T22:38:41.207614Z" modified="2021-06-16T22:38:41.207621Z" visited="2021-06-16T22:38:41.207615Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-06-16T22:38:41.207617Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Workspace/Projects/bcparks" added="2021-06-17T16:17:31.415258Z" modified="2021-06-17T16:17:31.415269Z" visited="2021-06-17T16:17:31.415259Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="gitkraken" exec="&apos;gitkraken %u&apos;" modified="2021-06-17T16:17:31.415261Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/murpheux/Workspace/Projects/dgiini" added="2021-06-17T16:19:56.672554Z" modified="2021-06-17T16:19:56.672562Z" visited="2021-06-17T16:19:56.672555Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="gitkraken" exec="&apos;gitkraken %u&apos;" modified="2021-06-17T16:19:56.672557Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

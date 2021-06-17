@@ -5,4 +5,5 @@
 /etc/pacman.conf
 /etc/fstab
 /etc/ssh/sshd_config
-
+/etc/pam.d
+/usr/share/xsessions/qtile.desktop

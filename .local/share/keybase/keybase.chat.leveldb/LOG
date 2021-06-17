@@ -1,0 +1,51 @@
+=============== May 28, 2021 (MDT) ===============
+20:01:33.391978 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+20:01:33.402239 db@open opening
+20:01:33.402616 version@stat F·[] S·0B[] Sc·[]
+20:01:33.408062 db@janitor F·2 G·0
+20:01:33.408108 db@open done T·5.842555ms
+=============== May 29, 2021 (MDT) ===============
+20:45:05.956406 db@close closing
+20:45:05.956623 db@close done T·214.392µs
+=============== May 30, 2021 (MDT) ===============
+14:36:18.059640 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:36:18.060369 version@stat F·[] S·0B[] Sc·[]
+14:36:18.060420 db@open opening
+14:36:18.060499 journal@recovery F·1
+14:36:18.061231 journal@recovery recovering @1
+14:36:18.067142 memdb@flush created L0@2 N·5 S·437B "kv:..119,v4":"kv:..119,d2"
+14:36:18.067650 version@stat F·[1] S·437B[437B] Sc·[0.25]
+14:36:18.084963 db@janitor F·3 G·0
+14:36:18.085020 db@open done T·24.586612ms
+=============== Jun 7, 2021 (MDT) ===============
+15:57:54.881207 db@close closing
+15:57:54.881431 db@close done T·221.603µs
+=============== Jun 10, 2021 (MDT) ===============
+17:33:31.847443 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+17:33:31.848036 version@stat F·[1] S·437B[437B] Sc·[0.25]
+17:33:31.848084 db@open opening
+17:33:31.848179 journal@recovery F·1
+17:33:31.848488 journal@recovery recovering @3
+17:33:31.850574 memdb@flush created L0@5 N·13 S·285B "kv:..ons,v19":"kv:..ons,v7"
+17:33:31.861403 version@stat F·[2] S·722B[722B] Sc·[0.50]
+17:33:31.868494 db@janitor F·4 G·0
+17:33:31.868528 db@open done T·20.432372ms
+=============== Jun 12, 2021 (MDT) ===============
+14:07:36.815888 db@close closing
+14:07:36.816127 db@close done T·237.35µs
+=============== Jun 12, 2021 (MDT) ===============
+14:07:37.935785 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:07:37.937459 version@stat F·[2] S·722B[722B] Sc·[0.50]
+14:07:37.937539 db@open opening
+14:07:37.937649 journal@recovery F·1
+14:07:38.190950 journal@recovery recovering @6
+14:07:38.193607 memdb@flush created L0@8 N·22 S·8KiB "kv:..119,v38":"kv:..3:1,v27"
+14:07:38.194422 version@stat F·[3] S·8KiB[8KiB] Sc·[0.75]
+14:07:38.205748 db@janitor F·5 G·0
+14:07:38.205821 db@open done T·268.238958ms
+14:09:18.756658 table@compaction L0·3 -> L1·0 S·8KiB Q·44
+14:09:18.759781 table@build created L1@11 N·16 S·6KiB "kv:..119,v38":"kv:..3:1,v27"
+14:09:18.759849 version@stat F·[0 1] S·6KiB[0B 6KiB] Sc·[0.00 0.00]
+14:09:18.761307 table@compaction committed F-2 S-1KiB Ke·0 D·24 T·3.392695ms
+14:09:18.761404 table@remove removed @5
+14:09:18.761434 table@remove removed @2

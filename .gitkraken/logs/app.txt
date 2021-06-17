@@ -1,0 +1,79 @@
+[2021-06-17T16:12:53.934Z] Detecting Git and Git LFS: started
+[2021-06-17T16:12:57.058Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"NEW"},{"id":"9c7ba1a3-aaf7-4423-86d6-70efa9bc8129","type":"RELEASE_NOTES"}],"selectedTabId":"9974f240-66d2-4433-a1ae-ac733f4644d3"}: started.
+[2021-06-17T16:12:57.089Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"NEW"},{"id":"9c7ba1a3-aaf7-4423-86d6-70efa9bc8129","type":"RELEASE_NOTES"}],"selectedTabId":"9974f240-66d2-4433-a1ae-ac733f4644d3"}: finished. gk-log://duration?t=31
+[2021-06-17T16:12:58.539Z] Detected Git: 2.32.0
+[2021-06-17T16:12:58.572Z] Did not detect Git LFS
+[2021-06-17T16:14:54.608Z] Add user profile: started.
+[2021-06-17T16:15:03.019Z] Add user profile: started.
+[2021-06-17T16:15:03.894Z] Add user profile: started.
+[2021-06-17T16:16:14.190Z] Add user profile: started.
+[2021-06-17T16:16:19.032Z] Add user profile: started.
+[2021-06-17T16:17:02.069Z] Verify SSH key for GitHub: started.
+[2021-06-17T16:17:02.085Z] Verify SSH key for GitHub: finished. gk-log://duration?t=16
+[2021-06-17T16:17:02.233Z] Set profile setting ["gpg","gpgProgram"] to "gpg": started.
+[2021-06-17T16:17:02.395Z] Set profile setting ["gpg","gpgProgram"] to "gpg": finished. gk-log://duration?t=162
+[2021-06-17T16:17:02.402Z] Set profile setting ["gpg","userSigningKey"] to "6D5DE597C5D7AC22BFDFB02A2FDFBB5B915D7595": started.
+[2021-06-17T16:17:02.406Z] Set profile setting ["gpg","userSigningKey"] to "6D5DE597C5D7AC22BFDFB02A2FDFBB5B915D7595": finished. gk-log://duration?t=4
+[2021-06-17T16:17:02.417Z] Set profile setting ["gpg","commitGpgSign"] to true: started.
+[2021-06-17T16:17:02.421Z] Set profile setting ["gpg","commitGpgSign"] to true: finished. gk-log://duration?t=4
+[2021-06-17T16:17:02.425Z] Set profile setting ["gpg","tagForceSignAnnotated"] to false: started.
+[2021-06-17T16:17:02.430Z] Set profile setting ["gpg","tagForceSignAnnotated"] to false: finished. gk-log://duration?t=5
+[2021-06-17T16:17:02.509Z] Add user profile: finished. gk-log://duration?t=127901
+[2021-06-17T16:17:02.726Z] Set profile setting ["gpg","gpgProgram"] to "gpg": started.
+[2021-06-17T16:17:02.729Z] Set profile setting ["gpg","gpgProgram"] to "gpg": finished. gk-log://duration?t=3
+[2021-06-17T16:17:02.737Z] Set profile setting ["gpg","userSigningKey"] to "6D5DE597C5D7AC22BFDFB02A2FDFBB5B915D7595": started.
+[2021-06-17T16:17:02.774Z] Set profile setting ["gpg","userSigningKey"] to "6D5DE597C5D7AC22BFDFB02A2FDFBB5B915D7595": finished. gk-log://duration?t=36
+[2021-06-17T16:17:02.781Z] Set profile setting ["gpg","commitGpgSign"] to true: started.
+[2021-06-17T16:17:02.840Z] Set profile setting ["gpg","commitGpgSign"] to true: finished. gk-log://duration?t=59
+[2021-06-17T16:17:02.907Z] Set profile setting ["gpg","tagForceSignAnnotated"] to false: started.
+[2021-06-17T16:17:02.927Z] Set profile setting ["gpg","tagForceSignAnnotated"] to false: finished. gk-log://duration?t=20
+[2021-06-17T16:17:02.947Z] Add user profile: finished. gk-log://duration?t=119928
+[2021-06-17T16:17:02.966Z] Set profile setting ["gpg","gpgProgram"] to "gpg": started.
+[2021-06-17T16:17:02.978Z] Set profile setting ["gpg","gpgProgram"] to "gpg": finished. gk-log://duration?t=10
+[2021-06-17T16:17:03.008Z] Set profile setting ["gpg","userSigningKey"] to "6D5DE597C5D7AC22BFDFB02A2FDFBB5B915D7595": started.
+[2021-06-17T16:17:03.044Z] Set profile setting ["gpg","userSigningKey"] to "6D5DE597C5D7AC22BFDFB02A2FDFBB5B915D7595": finished. gk-log://duration?t=35
+[2021-06-17T16:17:03.075Z] Set profile setting ["gpg","commitGpgSign"] to true: started.
+[2021-06-17T16:17:03.097Z] Set profile setting ["gpg","commitGpgSign"] to true: finished. gk-log://duration?t=22
+[2021-06-17T16:17:03.129Z] Set profile setting ["gpg","tagForceSignAnnotated"] to false: started.
+[2021-06-17T16:17:03.161Z] Set profile setting ["gpg","tagForceSignAnnotated"] to false: finished. gk-log://duration?t=32
+[2021-06-17T16:17:03.189Z] Add user profile: finished. gk-log://duration?t=119295
+[2021-06-17T16:17:03.265Z] Set profile setting ["gpg","gpgProgram"] to "gpg": started.
+[2021-06-17T16:17:03.320Z] Set profile setting ["gpg","gpgProgram"] to "gpg": finished. gk-log://duration?t=55
+[2021-06-17T16:17:03.326Z] Set profile setting ["gpg","userSigningKey"] to "6D5DE597C5D7AC22BFDFB02A2FDFBB5B915D7595": started.
+[2021-06-17T16:17:03.333Z] Set profile setting ["gpg","userSigningKey"] to "6D5DE597C5D7AC22BFDFB02A2FDFBB5B915D7595": finished. gk-log://duration?t=7
+[2021-06-17T16:17:03.335Z] Set profile setting ["gpg","commitGpgSign"] to true: started.
+[2021-06-17T16:17:03.338Z] Set profile setting ["gpg","commitGpgSign"] to true: finished. gk-log://duration?t=3
+[2021-06-17T16:17:03.618Z] Set profile setting ["gpg","tagForceSignAnnotated"] to false: started.
+[2021-06-17T16:17:03.698Z] Set profile setting ["gpg","tagForceSignAnnotated"] to false: finished. gk-log://duration?t=80
+[2021-06-17T16:17:03.715Z] Add user profile: finished. gk-log://duration?t=49525
+[2021-06-17T16:17:03.726Z] Set profile setting ["gpg","gpgProgram"] to "gpg": started.
+[2021-06-17T16:17:03.734Z] Set profile setting ["gpg","gpgProgram"] to "gpg": finished. gk-log://duration?t=8
+[2021-06-17T16:17:03.747Z] Set profile setting ["gpg","userSigningKey"] to "6D5DE597C5D7AC22BFDFB02A2FDFBB5B915D7595": started.
+[2021-06-17T16:17:03.751Z] Set profile setting ["gpg","userSigningKey"] to "6D5DE597C5D7AC22BFDFB02A2FDFBB5B915D7595": finished. gk-log://duration?t=4
+[2021-06-17T16:17:03.757Z] Set profile setting ["gpg","commitGpgSign"] to true: started.
+[2021-06-17T16:17:03.773Z] Set profile setting ["gpg","commitGpgSign"] to true: finished. gk-log://duration?t=16
+[2021-06-17T16:17:03.832Z] Set profile setting ["gpg","tagForceSignAnnotated"] to false: started.
+[2021-06-17T16:17:03.864Z] Set profile setting ["gpg","tagForceSignAnnotated"] to false: finished. gk-log://duration?t=32
+[2021-06-17T16:17:03.871Z] Add user profile: finished. gk-log://duration?t=44839
+[2021-06-17T16:17:32.126Z] Open repository /home/murpheux/Workspace/Projects/bcparks/: started.
+[2021-06-17T16:17:36.239Z] Open repository: finished. gk-log://duration?t=4113
+[2021-06-17T16:17:37.821Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"REPO","repoName":"bcparks","repoPath":"/home/murpheux/Workspace/Projects/bcparks/"},{"id":"9c7ba1a3-aaf7-4423-86d6-70efa9bc8129","type":"RELEASE_NOTES"}],"selectedTabId":"9974f240-66d2-4433-a1ae-ac733f4644d3"}: started.
+[2021-06-17T16:17:37.835Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"REPO","repoName":"bcparks","repoPath":"/home/murpheux/Workspace/Projects/bcparks/"},{"id":"9c7ba1a3-aaf7-4423-86d6-70efa9bc8129","type":"RELEASE_NOTES"}],"selectedTabId":"9974f240-66d2-4433-a1ae-ac733f4644d3"}: finished. gk-log://duration?t=14
+[2021-06-17T16:18:11.945Z] Set profile setting ["editor","fontFamily"] to "Courier New": started.
+[2021-06-17T16:18:11.960Z] Set profile setting ["editor","fontFamily"] to "Courier New": finished. gk-log://duration?t=15
+[2021-06-17T16:19:27.489Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"REPO","repoName":"bcparks","repoPath":"/home/murpheux/Workspace/Projects/bcparks/"},{"id":"9c7ba1a3-aaf7-4423-86d6-70efa9bc8129","type":"RELEASE_NOTES"}],"selectedTabId":"9c7ba1a3-aaf7-4423-86d6-70efa9bc8129"}: started.
+[2021-06-17T16:19:27.584Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"REPO","repoName":"bcparks","repoPath":"/home/murpheux/Workspace/Projects/bcparks/"},{"id":"9c7ba1a3-aaf7-4423-86d6-70efa9bc8129","type":"RELEASE_NOTES"}],"selectedTabId":"9c7ba1a3-aaf7-4423-86d6-70efa9bc8129"}: finished. gk-log://duration?t=95
+[2021-06-17T16:19:39.047Z] Open repository /home/murpheux/Workspace/Projects/bcparks/: started.
+[2021-06-17T16:19:41.846Z] Open repository: finished. gk-log://duration?t=2799
+[2021-06-17T16:19:41.891Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"REPO","repoName":"bcparks","repoPath":"/home/murpheux/Workspace/Projects/bcparks/"}],"selectedTabId":"9974f240-66d2-4433-a1ae-ac733f4644d3"}: started.
+[2021-06-17T16:19:41.924Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"REPO","repoName":"bcparks","repoPath":"/home/murpheux/Workspace/Projects/bcparks/"}],"selectedTabId":"9974f240-66d2-4433-a1ae-ac733f4644d3"}: finished. gk-log://duration?t=33
+[2021-06-17T16:19:43.160Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"REPO","repoName":"bcparks","repoPath":"/home/murpheux/Workspace/Projects/bcparks/"},{"id":"d676d710-fe2e-4526-a2d3-e27705f0aa27","type":"NEW"}],"selectedTabId":"d676d710-fe2e-4526-a2d3-e27705f0aa27"}: started.
+[2021-06-17T16:19:43.197Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"REPO","repoName":"bcparks","repoPath":"/home/murpheux/Workspace/Projects/bcparks/"},{"id":"d676d710-fe2e-4526-a2d3-e27705f0aa27","type":"NEW"}],"selectedTabId":"d676d710-fe2e-4526-a2d3-e27705f0aa27"}: finished. gk-log://duration?t=37
+[2021-06-17T16:19:57.214Z] Open repository /home/murpheux/Workspace/Projects/dgiini/: started.
+[2021-06-17T16:20:00.595Z] Open repository: finished. gk-log://duration?t=3381
+[2021-06-17T16:20:01.496Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"REPO","repoName":"bcparks","repoPath":"/home/murpheux/Workspace/Projects/bcparks/"},{"id":"d676d710-fe2e-4526-a2d3-e27705f0aa27","type":"REPO","repoName":"dgiini","repoPath":"/home/murpheux/Workspace/Projects/dgiini/"}],"selectedTabId":"d676d710-fe2e-4526-a2d3-e27705f0aa27"}: started.
+[2021-06-17T16:20:01.529Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"REPO","repoName":"bcparks","repoPath":"/home/murpheux/Workspace/Projects/bcparks/"},{"id":"d676d710-fe2e-4526-a2d3-e27705f0aa27","type":"REPO","repoName":"dgiini","repoPath":"/home/murpheux/Workspace/Projects/dgiini/"}],"selectedTabId":"d676d710-fe2e-4526-a2d3-e27705f0aa27"}: finished. gk-log://duration?t=33
+[2021-06-17T16:20:11.536Z] Open repository /home/murpheux/Workspace/Projects/bcparks/: started.
+[2021-06-17T16:20:13.813Z] Open repository: finished. gk-log://duration?t=2277
+[2021-06-17T16:20:13.897Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"REPO","repoName":"bcparks","repoPath":"/home/murpheux/Workspace/Projects/bcparks/"}],"selectedTabId":"9974f240-66d2-4433-a1ae-ac733f4644d3"}: started.
+[2021-06-17T16:20:14.010Z] Set profile setting ["tabInfo"] to {"tabs":[{"id":"9974f240-66d2-4433-a1ae-ac733f4644d3","type":"REPO","repoName":"bcparks","repoPath":"/home/murpheux/Workspace/Projects/bcparks/"}],"selectedTabId":"9974f240-66d2-4433-a1ae-ac733f4644d3"}: finished. gk-log://duration?t=113

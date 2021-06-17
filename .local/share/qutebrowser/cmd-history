@@ -1,0 +1,15 @@
+:o www.youtube.com
+:o youtube.com
+:open https://www.youtube.com/
+:open www.microsoft.com
+:open goog
+:open microsoft.com
+:help
+:quit
+:open goog
+:open https://www.microsoft.com/en-ca/
+:open https://www.microsoft.com/en-ca/ gO
+:gO
+:tab-clone
+:open yt
+:open https://www.microsoft.com/en-ca/

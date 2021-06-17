@@ -20,6 +20,9 @@ xrandr --output DP2 --auto --right-of DP1
 ## Launch nitrogen before launching plank
 nitrogen --restore &
 
+## light-locker
+light-locker &
+
 ## kill conky
 killall conky
 

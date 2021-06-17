@@ -1,0 +1,13 @@
+{
+  "remoteParents": {
+    "github": {
+      "murpheux": {
+        "dgiini": {
+          "hostingServiceType": "github",
+          "owner": "murpheux",
+          "name": "dgiini"
+        }
+      }
+    }
+  }
+}

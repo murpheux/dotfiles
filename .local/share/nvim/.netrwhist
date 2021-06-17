@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/murpheux/Workspace/Projects/dgiini'
+let g:netrw_dirhist_2='/home/murpheux/Workspace/Projects/dgiini/gw'
+let g:netrw_dirhist_1='/home/murpheux/Workspace/Projects/dgiini'

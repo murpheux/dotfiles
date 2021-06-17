@@ -1,0 +1,13 @@
+{
+  "remoteParents": {
+    "github": {
+      "bcgov": {
+        "bcparks.ca": {
+          "hostingServiceType": "github",
+          "owner": "bcgov",
+          "name": "bcparks.ca"
+        }
+      }
+    }
+  }
+}

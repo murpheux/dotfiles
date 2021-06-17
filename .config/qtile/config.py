@@ -9,13 +9,14 @@ from libqtile.config import Click, Drag, Group, KeyChord, Key, Match, Screen
 from libqtile.command import lazy
 from libqtile import layout, bar, widget, hook
 from typing import List  # noqa: F401
+#from plasma import Plasma
 
 mod = "mod4"                                 # Sets mod key to SUPER/WINDOWS
 mod1 = "alt"
 mod2 = "control"
 mod3 = "shift"
-myTerm = "kitty"                             # My terminal of choice
-secTerm = "alacritty"
+chosenTerminal = "kitty"                             # My terminal of choice
+secondaryTerminal = "alacritty"
 home = os.path.expanduser('~')
 
 
@@ -59,7 +60,7 @@ def switch_screens(qtile):
 keys = [
     # The essentials
 
-    Key([mod], "Return", lazy.spawn(myTerm+" -e zsh"), desc='Launches My Terminal'),
+    Key([mod], "Return", lazy.spawn(chosenTerminal+" -e zsh"), desc='Launches My Terminal'),
     Key([mod, "shift"], "Return", lazy.spawn( "dmenu_run -p 'Run: '"), desc='Run Launcher'),
     Key([mod], "Tab", lazy.next_layout(), desc='Toggle through layouts'),
     Key([mod, "shift"], "c", lazy.window.kill(), desc='Kill active window'),
@@ -217,7 +218,8 @@ keys = [
 
     # Lock and Powermangament
 
-    Key([mod2, "mod1"], 'l', lazy.spawn('dm-tool lock'))
+    #Key([mod2, "mod1"], 'l', lazy.spawn('dm-tool lock'))
+    Key([mod2, "mod1"], 'l', lazy.spawn('light-locker-command -l'))
 ]
 
 group_names = [
@@ -290,28 +292,21 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-def init_widgets_basic():
+
+def init_widgets_s1():
     widgets_list = [
-        widget.Sep(linewidth=0, padding=6,
-                   foreground=colors[2], background=colors[0]),
-        widget.Image(filename="~/.config/qtile/icons/manjaro_maia_32x32.png", scale="False",
-                     mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(myTerm)}),
-        widget.Sep(linewidth=0, padding=6,
-                   foreground=colors[2], background=colors[0]),
-        widget.GroupBox(font="UbuntuMono Nerd Font Bold", fontsize=9, margin_y=3, margin_x=0, padding_y=5, padding_x=3, borderwidth=3, active=colors[2], inactive=colors[7], rounded=False, highlight_color=colors[1], highlight_method="line",
-                        this_current_screen_border=colors[6], this_screen_border=colors[4], other_current_screen_border=colors[6], other_screen_border=colors[4], foreground=colors[2], background=colors[0]),
-        widget.Prompt(prompt=prompt, font="UbuntuMono Nerd Font", padding=10,
-                      foreground=colors[3], background=colors[1]),
-        widget.Sep(linewidth=0, padding=40,
-                   foreground=colors[2], background=colors[0]),
-        widget.WindowName(
-            foreground=colors[6], background=colors[0], padding=0),
-        widget.Sep(linewidth=0, padding=6,
-                   foreground=colors[0], background=colors[0]),
         widget.TextBox(
-            text='', background=colors[0], foreground=colors[5], padding=0, fontsize=37),
+            text='', background=colors[0], foreground=colors[4], padding=0, fontsize=37),
         widget.TextBox(
-            text=" 🔉", foreground=colors[2], background=colors[5], padding=0, fontsize=14),
+            text=" 🌦  ", foreground=colors[2], background=colors[4], padding=0),
+        widget.OpenWeather(api_key='ea2fc5ee1deeaaee1bc60eb1bf60cb4b', cityid=5913490, 
+                    format='{location_city}: {main_temp}°{units_temperature} 💧{humidity}%', 
+                    mouse_callbacks={ 'Button1': lambda: qtile.cmd_spawn(chosenTerminal + ' --hold -e curl wttr.in/calgary')},
+                           foreground=colors[2], background=colors[4]),
+        widget.TextBox(
+            text='', background=colors[4], foreground=colors[5], padding=0, fontsize=37),
+        widget.TextBox(
+            text=" 🔈", foreground=colors[2], background=colors[5], padding=0, fontsize=14),
         widget.TextBox(
             text=" Vol:", foreground=colors[2], background=colors[5], padding=0),
         widget.Volume(foreground=colors[2], background=colors[5], padding=5),
@@ -321,16 +316,22 @@ def init_widgets_basic():
             "~/.config/qtile/icons")], foreground=colors[0], background=colors[4], padding=0, scale=0.7),
         widget.CurrentLayout(
             foreground=colors[2], background=colors[4], padding=5),
+        widget.TextBox(
+            text='', background=colors[4], foreground=colors[5], padding=0, fontsize=37),
+        widget.TextBox(
+            text=" 9️⃣", foreground=colors[2], background=colors[5], padding=0, fontsize=14),
+        widget.Clock(
+            foreground=colors[2], background=colors[5], format="%a, %b %d - %I:%M%p "),
     ]
     return widgets_list
 
 
-def init_widgets_list():
-    widgets_list = [
+def init_widgets_base():
+    widgets_base = [
         widget.Sep(linewidth=0, padding=6,
                    foreground=colors[2], background=colors[0]),
         widget.Image(filename="~/.config/qtile/icons/manjaro_maia_32x32.png", scale="False",
-                     mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(myTerm)}),
+                     mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(chosenTerminal)}),
         widget.Sep(linewidth=0, padding=6,
                    foreground=colors[2], background=colors[0]),
         widget.GroupBox(font="UbuntuMono Nerd Font Bold", fontsize=9, margin_y=3, margin_x=0, padding_y=5, padding_x=3, borderwidth=3, active=colors[2], inactive=colors[7], rounded=False, highlight_color=colors[1], highlight_method="line",
@@ -341,18 +342,23 @@ def init_widgets_list():
                    foreground=colors[2], background=colors[0]),
         widget.WindowName(
             foreground=colors[6], background=colors[0], padding=0),
+    ]
+    return widgets_base
+
+def init_widgets_s2():
+    widgets_list = [
         widget.Systray(background=colors[0], padding=5),
         widget.Sep(linewidth=0, padding=6,
                    foreground=colors[0], background=colors[0]),
         widget.TextBox(
             text='', background=colors[0], foreground=colors[4], padding=0, fontsize=37),
         widget.TextBox(
-            text=" 🈴", foreground=colors[2], background=colors[4], padding=0, fontsize=14),
+            text=" 📶", foreground=colors[2], background=colors[4], padding=0, fontsize=14),
         widget.Net(interface="enp3s0f0", format='{down} ↓↑ {up}',
                    foreground=colors[2], background=colors[4], padding=5),
         widget.TextBox(
             text='', background=colors[4], foreground=colors[5], padding=0, fontsize=37),
-        widget.TextBox(text=" 🌡 ", padding=2,
+        widget.TextBox(text=" 🔥", padding=2,
                        foreground=colors[2], background=colors[5], fontsize=11),
         widget.ThermalSensor(
             metric=True, padding=2, foreground=colors[2], background=colors[5]),
@@ -361,23 +367,23 @@ def init_widgets_list():
         widget.TextBox(text=" ⟳", padding=2,
                        foreground=colors[2], background=colors[4], fontsize=14),
         widget.CheckUpdates(update_interval=1800, distro="Arch_checkupdates", display_format="{updates} Updates", foreground=colors[2], mouse_callbacks={
-                            'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e sudo pacman -Syu')}, background=colors[4]),
+                            'Button1': lambda: qtile.cmd_spawn(chosenTerminal + ' -e sudo pacman -Syu')}, background=colors[4]),
         widget.TextBox(
             text='', background=colors[4], foreground=colors[5], padding=0, fontsize=37),
         widget.TextBox(
             text=" 🖬", foreground=colors[2], background=colors[5], padding=0, fontsize=14),
         widget.Memory(foreground=colors[2], background=colors[5], mouse_callbacks={
-                      'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e bpytop')}, padding=5),
+                      'Button1': lambda: qtile.cmd_spawn(chosenTerminal + ' -e bpytop')}, padding=5),
         widget.TextBox(
             text='', background=colors[5], foreground=colors[4], padding=0, fontsize=37),
         widget.TextBox(text=" 🏢", padding=0,
                        foreground=colors[2], background=colors[4], fontsize=12),
         widget.CPU(foreground=colors[2], background=colors[4], mouse_callbacks={
-                      'Button1': lambda: qtile.cmd_spawn(myTerm + ' -e neofetch')}, padding=5),
+                      'Button1': lambda: qtile.cmd_spawn(chosenTerminal + ' --hold -e neofetch')}, padding=5),
         widget.TextBox(
             text='', background=colors[4], foreground=colors[5], padding=0, fontsize=37),
         widget.TextBox(
-            text=" 🔉", foreground=colors[2], background=colors[5], padding=0, fontsize=14),
+            text=" 🔈", foreground=colors[2], background=colors[5], padding=0, fontsize=14),
         widget.TextBox(
             text=" Vol:", foreground=colors[2], background=colors[5], padding=0),
         widget.Volume(foreground=colors[2], background=colors[5], padding=5),
@@ -390,20 +396,21 @@ def init_widgets_list():
         widget.TextBox(
             text='', background=colors[4], foreground=colors[5], padding=0, fontsize=37),
         widget.TextBox(
-            text=" 📆", foreground=colors[2], background=colors[5], padding=0, fontsize=14),
+            text=" 9️⃣", foreground=colors[2], background=colors[5], padding=0, fontsize=14),
         widget.Clock(
-            foreground=colors[2], background=colors[5], format="%A, %B %d - %I:%M %p "),
+            foreground=colors[2], background=colors[5], format="%a, %b %d - %I:%M%p ",
+                            mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(chosenTerminal + ' --hold -e cal -y')})
     ]
     return widgets_list
 
 
 def init_widgets_screen1():
-    widgets_screen1 = init_widgets_basic()
+    widgets_screen1 = init_widgets_base() + init_widgets_s1()
     return widgets_screen1
 
 
 def init_widgets_screen2():
-    widgets_screen2 = init_widgets_list()
+    widgets_screen2 = init_widgets_base() + init_widgets_s2()
     # Monitor 2 will display all widgets in widgets_list
     return widgets_screen2
 
@@ -411,6 +418,10 @@ def init_widgets_screen2():
 def init_screens():
     return [Screen(top=bar.Bar(widgets=init_widgets_screen1(), opacity=1.0, size=20)),
             Screen(top=bar.Bar(widgets=init_widgets_screen2(), opacity=1.0, size=20))]
+
+def init_widgets_list():
+    lst = init_widgets_base() + init_widgets_screen2()
+    return lst
 
 
 if __name__ in ["config", "__main__"]:

@@ -1,0 +1,26 @@
+{
+  "tabInfo": {
+    "tabs": [
+      {
+        "id": "9974f240-66d2-4433-a1ae-ac733f4644d3",
+        "type": "REPO",
+        "repoName": "bcparks",
+        "repoPath": "/home/murpheux/Workspace/Projects/bcparks/"
+      }
+    ],
+    "selectedTabId": "9974f240-66d2-4433-a1ae-ac733f4644d3"
+  },
+  "profileIcon": "Keifuto.png",
+  "profileName": "Default Profile",
+  "userEmail": "dapo.onawole@gmail.com",
+  "userName": "Clement Onawole",
+  "gpg": {
+    "gpgProgram": "gpg",
+    "userSigningKey": "6D5DE597C5D7AC22BFDFB02A2FDFBB5B915D7595",
+    "commitGpgSign": true,
+    "tagForceSignAnnotated": false
+  },
+  "editor": {
+    "fontFamily": "Courier New"
+  }
+}

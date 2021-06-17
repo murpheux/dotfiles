@@ -55,13 +55,10 @@ WHITE='[1;37m'
 #ZSH_THEME="agnoster"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
 POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=(history)
 POWERLEVEL10K_SHORTEN_DIR_LENGTH=1
-
 POWERLEVEL10K_LEFT_PROMPT_ELEMENTS=(dir rbenv vcs)
 POWERLEVEL10K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
-
 POWERLEVEL10K_VCS_MODIFIED_BACKGROUND='red'
 
 # Set list of themes to load
@@ -150,9 +147,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -162,26 +156,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# MSDOS map
-alias dir='ls -l'
-alias cls='clear'
-
-alias lf="ls -l | egrep -v '^d'"
-alias ldir="ls -l | egrep '^d'"
-
-# Alias
-alias df='df -h'
-alias du='du -h'
-alias grep='grep --colour=auto'
-alias h='history'
-alias home='cd ~'
-alias j='jobs -l'
-
-
-alias sysinfo='system_profiler SPHardwareDataType'
-
-# code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;} 
-
 # Android Home
 export ANDROID_HOME=/home/murpheux/Library/Android/sdk
 export MEDUSA_HOME=/home/murpheux/Workspace/Project/Medusa
@@ -189,61 +163,17 @@ export MEDUSA_HOME=/home/murpheux/Workspace/Project/Medusa
 
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 
-# Wine
-alias npp="wine .wine/drive_c/Program\ Files/Notepad++/notepad++.exe"
-alias winscp="wine .wine/drive_c/Program\ Files/WinSCP/WinSCP.exe"
-
-alias path='echo -e ${PATH//:/\n}'
-
-#Sublime Text
-alias sublime="open -a 'sublime text'"
-
-
-# Google Cloud Platform
-alias dk=docker
-alias dm=docker-machine
-alias gc=gcloud
-alias gt=gsutil
-#alias kb=kubectl
-alias kb='microk8s.kubectl'
-alias vlt=vault
-alias mkb=minikube
-alias dcp=docker-compose
-alias hk=heroku
-alias asb='ansible -e ansible_python_interpreter=/usr/bin/python3'
-alias hd=hadoop #/usr/local/Cellar/hadoop/2.8.2/bin/hadoop
-alias vg=vagrant
-alias lorem=/home/murpheux/Applications/lorem
-alias gcn=gunicorn
-alias gcn3=gunicorn3
-alias dcomp=docker-compose
-alias ptest='python3 -m pytest'
-
-
-#alias whatismyip='dig +short myip.opendns.com @resolver1.opendns.com'
-alias whatismyip='wget -qO- http://ipecho.net/plain | xargs echo'
-alias whatismyipv6="host myip.opendns.com resolver1.opendns.com | grep 'myip.opendns.com has' | awk '{print \$5}'"
-alias vm='vboxmanage'
-
 # GO
 export GO_HOME=/usr/local/go
 export GOPATH=$HOME/go
-
 export PATH=$HADOOP_HOME/bin:$GO_HOME/bin:$PATH
 
-alias node_repl=/home/murpheux/Applications/repl.js
-
-alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+# import aliases
+source ~/.config/aliases.sh
 
 # Set Spaceship ZSH as a prompt
 #autoload -Uz promptinit; promptinit
 #prompt spaceship
-
-#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-PATH="/home/linuxbrew/.linuxbrew/bin:/home/murpheux/.npm-global/bin:$PATH"
-PATH="/snap/bin:$PATH"
-PATH="/home/murpheux/.local/bin:$PATH"
 
 # LDAP CONFIG
 export LDAP_ORGANISATION=sld
@@ -255,10 +185,7 @@ export MSSQL_SA_PASSWORD=Il0v35ql!
 export MSSQL_DB=sldApi
 export MSSQL_USER=sld_user
 export MSSQL_PASSWORD=Il0v35ql!
-
 export MSSQL_JOBMANAGER_DB=sldJobManager
-
-alias vlt=vault
 export VAULT_ADDR=http://172.16.238.8:8200
 export VAULT_TOKEN=s.gB9Lx9WNVpvB3Cq8tT7DNeq3
 
@@ -268,34 +195,11 @@ export JK_TOKEN=113426983fbccc004ba606e4d4f30001ee
 export VSH_VERSION=0.1.4
 export SSHD_CONFIG_PATH=/etc/ssh/sshd_config
 export PAMD_CONFIG_PATH=/etc/pam.d/sshd
-
-alias x="exit"
-alias sz="source ~/.zshrc"
-alias hc="history -c"
-
 export GOPATH=$HOME/work
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
-alias glt='sudo gluster'
-alias gfs='sudo gluster'
-alias pm='sudo podman'
-alias bd='sudo buildah'
-alias crictl='sudo crictl'
-alias sudo='sudo '
-alias speed='speedtest-cli --server 4637 --simple'
-#alias python=python3
-
 source <(kubectl completion zsh)
 complete -F __start_kubectl kb
-
-#alias pbcopy='xclip -selection clipboard'
-#alias pbpaste='xclip -selection clipboard -o'
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-
-
-alias kb='kubectl --kubeconfig=/home/murpheux/.kube/k8s-1-18-8-do-1-sfo2-1602808957989-kubeconfig.yaml'
-alias helm='helm --kubeconfig=/home/murpheux/.kube/k8s-1-18-8-do-1-sfo2-1602808957989-kubeconfig.yaml'
 
 random-string()
 {
@@ -303,7 +207,6 @@ random-string()
 }
 
 #export DOCKER_HOST=scarlet
-
 export SMTP_PW=cG9ienhxaWZhcHpremZnZgo=
 export SENDGRID_API_KEY=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
  
@@ -328,47 +231,30 @@ GOOGLE_API_KEY=AIzaSyB4rkOg7uSupskMTi-2kiteuvn2KaBswZU
 # Kafka cli
 export KAFKA_HOME=/home/murpheux/Apps
 export KAFKA_BIN=$KAFKA_HOME/kafka_2.13-2.7.0/bin
-
-alias kafkabrk=$KAFKA_BIN/'kafka-broker-api-versions.sh --bootstrap-server sclet:9092'
-alias kafkatp=$KAFKA_BIN/'kafka-topics.sh --bootstrap-server sclet:9092'
-alias kafkacon=$KAFKA_BIN/'kafka-console-consumer.sh --bootstrap-server sclet:9092'
-alias kafkapro=$KAFKA_BIN/'kafka-console-producer.sh --bootstrap-server sclet:9092'
-alias kafkacfg=$KAFKA_BIN/'kafka-config.sh --bootstrap-server sclet:9092'
-
 export KAFKA_HOME=/home/murpheux/Apps
-
-#eval $(thefuck --alias)
 
 #PATH="$HOME/.cargo/bin:$PATH"
 #source $HOME/.cargo/env
-
-alias au='sudo apt update -y && sudo apt upgrade -y'
-alias reboot='sudo reboot'
-alias untar='tar -zxvf '
-alias wget='wget -c '
-#alias ping='ping -c 10'
-alias ydl=youtube-dl
-alias lnd=linode-cli
-
 # setterm -linewrap off
 
 kitty + complete setup zsh | source /dev/stdin
-
-alias print256color='curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/ | bash'
 
 #linux_distros=('popos' 'ubuntu' 'fedora' 'arch' 'majaro' 'linuxmint' 'opensuse' 'garuda' 'debian' 'parrot' 'kali' 'alpine' 'android' 'centos' 'gentoo' 'macos' 'raspbian' 'redhat' 'elementary' 'reborn' 'zorin' 'solus' 'slackware' 'freebsd' 'mx' 'puppy' 'sparky' 'peppermint')
 #RANDOM=$$$(date +%s)
 #selected_os=${linux_distros[$RANDOM % ${#linux_distros[@]}]}
 #neofetch --ascii_distro $selected_os
 
-linux_distros=('android' 'arch' 'arco' 'artix' 'bedrock' 'centos' 'dahlia' 'debian' 'dragonfly' 'elementary' 'endeavour' 'fedora' 'freebsd' 'gentoo' 'gnu' 'guix' 'haiku' 'hyperbola' 'instantos' 'irix' 'kdeneon' 'lite' 'mint' 'linux' 'macos' 'mageia' 'manjaro' 'minimix' 'mx' 'netbsd' 'nixos' 'openbsd' 'opensusetumbleweed' 'opensuse' 'openwrt' 'parabola' 'pop!_os' 'pureos' 'raspbian' 'solaris' 'ubuntu' 'void')
-RANDOM=$$$(date +%s)
-selected_os=${linux_distros[$RANDOM % ${#linux_distros[@]}]}
-export PF_ASCII=$selected_os
-pfetch
-colorscript random
-echo ">>>>>>>> $(fortune) <<<<<<<<"
+# linux_distros=('android' 'arch' 'arco' 'artix' 'bedrock' 'centos' 'dahlia' 'debian' 'dragonfly' 'elementary' 'endeavour' 'fedora' 'freebsd' 'gentoo' 'gnu' 'guix' 'haiku' 'hyperbola' 'instantos' 'irix' 'kdeneon' 'lite' 'mint' 'linux' 'macos' 'mageia' 'manjaro' 'minimix' 'mx' 'netbsd' 'nixos' 'openbsd' 'opensusetumbleweed' 'opensuse' 'openwrt' 'parabola' 'pop!_os' 'pureos' 'raspbian' 'solaris' 'ubuntu' 'void')
+# RANDOM=$$$(date +%s)
+# selected_os=${linux_distros[$RANDOM % ${#linux_distros[@]}]}
+# export PF_ASCII=$selected_os
+# pfetch
+# colorscript random
+# echo ">>>>>>>> $(fortune) <<<<<<<<"
 
+PATH="/home/linuxbrew/.linuxbrew/bin:/home/murpheux/.npm-global/bin:$PATH"
+PATH="/snap/bin:$PATH"
+PATH="/home/murpheux/.local/bin:$PATH"
 PATH=$PATH:$HOME/.SpaceVim/bin
 
 # zsh history
@@ -383,12 +269,21 @@ setopt HIST_IGNORE_ALL_DUPS
 
 export PATH="$PATH:/home/murpheux/istio-1.9.1/bin"
 export PATH="${PATH}:${HOME}/.krew/bin"
-
 export AWS_PROFILE=murpheux
+export PATH=$PATH:/home/murpheux/bin:/home/murpheux/lib/apps/bin
+source '/home/murpheux/lib/azure-cli/az.completion'
+export EDITOR=vi
+export PATH="$PATH:/home/murpheux/.dotnet/tools"
+source /usr/share/nvm/init-nvm.sh
 
-# set wordwrap
-setterm -linewrap on
+# Gmail mutt
+export GMAIL_PASS=$(gpg --textmode -d ~/.cred/gmail/cred.gpg)
+eval "$(bw completion --shell zsh); compdef _bw bw;"
 
+# bitwarden
+BW_VAR=$(gpg --textmode -d ~/.cred/bitwarden/apiKey.gpg)
+export BW_CLIENTID=$(echo ${BW_VAR} | jq '.client_id')
+export BW_CLIENTSECRET=$(echo ${BW_VAR} | jq '.client_secret')
 
 autoload -U +X compinit && compinit -i
 autoload -U +X bashcompinit && bashcompinit -i
@@ -396,8 +291,6 @@ complete -o nospace -F /usr/local/bin/aliyun aliyun
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-alias icat="kitty +kitten icat"
 
 # Use lf to switch directories and bind it to ctrl-o
 lfcd () {
@@ -411,29 +304,6 @@ lfcd () {
 }
 bindkey -s '^o' 'lfcd
 '
-
-export PATH=$PATH:/home/murpheux/bin:/home/murpheux/lib/apps/bin
-
-source '/home/murpheux/lib/azure-cli/az.completion'
-
-export EDITOR=vi
-alias update='sudo pacman -Syu'
-alias upall='yay -Syu -noconfirm'
-
-# youtube-dl extract
-alias yta-aac=”youtube-dl –extract-audio –audio-format aac “
-alias yta-best=”youtube-dl –extract-audio –audio-format best “
-alias yta-flac=”youtube-dl –extract-audio –audio-format flac “
-alias yta-m4a=”youtube-dl –extract-audio –audio-format m4a “
-alias yta-mp3=”youtube-dl –extract-audio –audio-format mp3 “
-alias yta-opus=”youtube-dl –extract-audio –audio-format opus “
-alias yta-vorbis=”youtube-dl –extract-audio –audio-format vorbis “
-alias yta-wav=”youtube-dl –extract-audio –audio-format wav “
-alias ytv-best=”youtube-dl -f bestvideo+bestaudio “
-
-export PATH="$PATH:/home/murpheux/.dotnet/tools"
-source /usr/share/nvm/init-nvm.sh
-
 # Run something, muting output or redirecting it to the debug stream
 # depending on the value of _ARC_DEBUG.
 # If ARGCOMPLETE_USE_TEMPFILES is set, use tempfiles for IPC.
@@ -480,10 +350,5 @@ _python_argcomplete() {
 }
 complete -o nospace -o default -o bashdefault -F _python_argcomplete airflow
 
-
-# Gmail mutt
-export GMAIL_PASS=$(gpg --textmode -d ~/.cred/gmail/cred.gpg)
-
-eval "$(bw completion --shell zsh); compdef _bw bw;"
-
-#source ~/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# set wordwrap
+setterm -linewrap on

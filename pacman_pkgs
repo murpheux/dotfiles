@@ -35,6 +35,7 @@ btrfs-progs
 buildah
 bullshit
 bzip2
+cabal-install
 chkrootkit
 cmatrix
 cmus
@@ -161,6 +162,7 @@ libdvdcss
 libgsf
 libisoburn
 libopenraw
+libpam-google-authenticator
 libreoffice-fresh
 libva-intel-driver
 libva-mesa-driver
@@ -217,10 +219,12 @@ mousepad
 mpc
 mpd
 mpv
+mssql-cli
 mtools
 mtpfs
 mugshot
 mutt
+ncdu
 neofetch
 neovim
 net-tools
@@ -240,6 +244,7 @@ npm
 nss-mdns
 ntfs-3g
 ntp
+nuget
 numlockx
 nvm
 obs-studio
@@ -268,6 +273,7 @@ podman
 poppler-glib
 postgresql
 postman-bin
+powershell-bin
 powertop
 procps-ng
 psmisc
@@ -307,6 +313,7 @@ spectre-meltdown-checker
 speedtest-cli
 squashfs-tools
 sshfs
+stack
 sublime-text-3
 sudo
 sysfsutils
@@ -323,6 +330,7 @@ thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-volman
+tldr
 tlp
 toilet-fonts
 traceroute
@@ -353,6 +361,7 @@ wget
 which
 whois
 wireshark-qt
+wmctrl
 wpa_supplicant
 xclip
 xcursor-simpleandsoft
@@ -387,6 +396,9 @@ xfdesktop
 xfsprogs
 xfwm4
 xiccd
+xmobar
+xmonad
+xmonad-contrib
 xorg-mkfontscale
 xorg-server
 xorg-twm
@@ -394,7 +406,9 @@ xorg-xinit
 xorg-xkill
 xorg-xrandr
 xsane
+xscreensaver
 xsel
+xterm
 yay
 youtube-dl
 yq
