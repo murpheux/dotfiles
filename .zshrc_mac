@@ -357,5 +357,5 @@ complete -o nospace -F /usr/local/bin/aliyun aliyun
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-PATH=$PATH:/Users/murpheux/Library/Python/3.8/bin:/opt/homebrew/bin
+PATH=$PATH:/Users/murpheux/Library/Python/3.8/bin:/opt/homebrew/bin:/Users/murpheux/.npm-global/bin
 
