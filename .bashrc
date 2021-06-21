@@ -116,6 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 [ -r /home/murpheux/.byobu/prompt ] && . /home/murpheux/.byobu/prompt   #byobu-prompt#
-source "$HOME/.cargo/env"
+#source "$HOME/.cargo/env"
 
 complete -C /usr/local/bin/aliyun aliyun
+
+source ~/.config/aliases.sh
