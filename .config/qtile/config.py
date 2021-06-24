@@ -328,7 +328,7 @@ def init_widgets_s1():
 def init_widgets_base():
     widgets_base = [
         widget.Sep(linewidth=0, padding=6, foreground=colors[2], background=colors[0]),
-        widget.Image(filename="~/.config/qtile/icons/manjaro_maia_32x32.png", scale="False",
+        widget.Image(filename="~/.config/qtile/icons/terminal-iconx24.png", scale="False",
                      mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(chosenTerminal)}),
         widget.Sep(linewidth=0, padding=6, foreground=colors[2], background=colors[0]),
         widget.GroupBox(font="UbuntuMono Nerd Font Bold", fontsize=9, margin_y=3, margin_x=0, padding_y=5, padding_x=3, borderwidth=3, active=colors[2], inactive=colors[7], rounded=False, highlight_color=colors[1], highlight_method="line",
@@ -367,7 +367,8 @@ def init_widgets_s2():
         widget.TextBox(
             text=" 📶", foreground=colors[2], background=colors[4], padding=0, fontsize=14),
         widget.Net(interface="enp3s0f0", format='{down} ↓↑ {up}',
-                   foreground=colors[2], background=colors[4], padding=5),
+                   foreground=colors[2], background=colors[4], padding=5, mouse_callbacks={
+                    'Button1': lambda: qtile.cmd_spawn(chosenTerminal + ' --hold -e ss -ltp')}),
         widget.TextBox( text='', background=colors[4], foreground=colors[5], padding=0, fontsize=37),
         widget.TextBox(text=" 🔥", padding=2,
                        foreground=colors[2], background=colors[5], fontsize=11),
