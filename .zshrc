@@ -261,6 +261,7 @@ PATH=$PATH:$HOME/.SpaceVim/bin
 export HISTCONTROL=ignoreboth:erasedups
 export HISTFILESIZE=100000
 export HISTSIZE=100000
+export HISTIGNORE='ls *:rm *:cls:h:pwd:rm -rf *:ll:paru:paru -Syy:paru -Syu:paru -Syyu:cd *'
 setopt INC_APPEND_HISTORY
 #export HISTTIMEFORMAT="[%F %T] "
 #setopt EXTENDED_HISTORY

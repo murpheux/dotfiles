@@ -68,6 +68,7 @@ dosfstools
 dotnet-sdk-3.1
 dotnet-sdk-bin
 dropbox
+dunst
 e2fsprogs
 ecryptfs-utils
 efibootmgr
@@ -80,6 +81,7 @@ exo
 f2fs-tools
 fakeroot
 fd
+festival
 ffmpeg
 ffmpegthumbnailer
 figlet
@@ -184,11 +186,13 @@ lightdm-gtk-greeter
 lightdm-gtk-greeter-settings
 linux-firmware
 linux512
+linux513
 logrotate
 lolcat
 lsb-release
 lsof
 lvm2
+lxsession
 lynx
 m4
 macchanger
@@ -211,6 +215,7 @@ manjaro-system
 manjaro-xfce-minimal-settings
 mariadb-clients
 matcha-gtk-theme
+mbrola
 mdadm
 memtest86+
 menulibre
@@ -241,7 +246,7 @@ mythes-en
 ncdu
 neofetch
 neomutt
-neovim
+neovim-git
 net-tools
 network-manager-applet
 networkmanager
@@ -302,8 +307,8 @@ pwgen
 python-pip
 qalculate-gtk
 qpdfview
-qtile
-qutebrowser
+qtile-git
+qtile-plasma
 rambox-bin
 reaper-bin
 reiserfsprogs
@@ -375,6 +380,7 @@ vifm
 vim
 vivaldi
 vlc
+volumeicon
 vulkan-intel
 vulkan-radeon
 w3m

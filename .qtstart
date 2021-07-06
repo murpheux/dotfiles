@@ -24,7 +24,7 @@ nitrogen --restore &
 light-locker &
 
 ## kill conky
-killall conky
+#killall conky
 
 exec /usr/bin/qtile
 

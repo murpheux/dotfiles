@@ -226,21 +226,10 @@ keys = [
     Key([mod2, "mod1"], 'l', lazy.spawn('light-locker-command -l'))
 ]
 
-group_names = [
-    ("🏠", {'layout': 'monadtall'}),
-    ("🌎", {'layout': 'monadtall'}),
-    ("📦", {'layout': 'monadtall'}),
-    ("🔧", {'layout': 'monadtall'}),
-    ("💾", {'layout': 'monadtall'}),
-    ("🔌", {'layout': 'monadtall'}),
-    ("💻", {'layout': 'monadtall'}),
-    ("🔨", {'layout': 'monadtall'}),
-    ("🎬", {'layout': 'floating'})
-]
+group_names = ["🏠", "🌎", "📦", "🔧", "💾", "🔌", "💻", "🔨", "🎬" ]
+groups = [Group(name, layout='monadtall') for name in group_names]
 
-groups = [Group(name, **kwargs) for name, kwargs in group_names]
-
-for i, (name, kwargs) in enumerate(group_names, 1):
+for i, name in enumerate(group_names, 1):
     # Switch to another group
     keys.append(Key([mod], str(i), lazy.group[name].toscreen()))
     # Send current window to another group
@@ -283,21 +272,6 @@ colors = [
     ["#4f76c7", "#4f76c7"],  # color for the 'even widgets'
     ["#e1acff", "#e1acff"],  # window name
     ["#ecbbfb", "#ecbbfb"],  # backbround for inactive screens
-
-    ["#ffffff", "#ffffff"],
-    ["#000000", "#000000"],
-    ["#292d3e", "#292d3e"],
-    ["#434758", "#434758"],
-    ["#bc13fe", "#bc13fe"],
-    ["#8d62a9", "#8d62a9"],
-    ["#668bd7", "#668bd7"],
-    ["#e1acff", "#e1acff"],
-    ["#AD343E", "#AD343E"],
-    ["#f76e5c", "#f76e5c"],
-    ["#F39C12", "#F39C12"],
-    ["#F7DC6F", "#F7DC6F"],
-    ["#f1ffff", "#f1ffff"],
-    ["#4c566a", "#4c566a"]
 ]
 
 prompt = "{0}@{1}: ".format(os.environ["USER"], socket.gethostname())
@@ -314,13 +288,17 @@ extension_defaults = widget_defaults.copy()
 
 def init_widgets_s1():
     widgets_list = [
-        widget.TextBox( text='', background=colors[0], foreground=colors[4], padding=0, fontsize=37),
-        widget.TextBox( text=" 🌦  ", foreground=colors[2], background=colors[4], padding=0),
+        widget.TextBox( text='', background=colors[0], foreground=colors[5], padding=0, fontsize=37),
+        widget.TextBox( text=" 🌦  ", foreground=colors[2], background=colors[5], padding=0),
         widget.OpenWeather(api_key='ea2fc5ee1deeaaee1bc60eb1bf60cb4b', cityid=5913490,
                            format='{location_city}: {main_temp}°{units_temperature} 💧{humidity}%',
                            mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(
                                chosenTerminal + ' --hold -e curl wttr.in/calgary')},
-                           foreground=colors[2], background=colors[4]),
+                           foreground=colors[2], background=colors[5]),
+        widget.TextBox( text='', background=colors[5], foreground=colors[4], padding=0, fontsize=37 ),
+        widget.TextBox( text = " ₿", padding=0, foreground=colors[2], background=colors[4], fontsize=12 ),
+        widget.BitcoinTicker( foreground=colors[2], background=colors[4], padding=5, currency="CAD",
+            mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(chosenTerminal + ' --hold -e curl rate.sx/btc')}),
     ]
     return widgets_list
 
@@ -351,7 +329,7 @@ def init_widgets_up():
             "~/.config/qtile/icons")], foreground=colors[0], background=colors[4], padding=0, scale=0.7),
         widget.CurrentLayout( foreground=colors[2], background=colors[4], padding=5),
         widget.TextBox( text='', background=colors[4], foreground=colors[5], padding=0, fontsize=37),
-        widget.TextBox( text=" 📅", foreground=colors[2], background=colors[5], padding=0, fontsize=14),
+        widget.TextBox( text=" 📅", foreground=colors[2], background=colors[5], padding=2, fontsize=14),
         widget.Clock(
             foreground=colors[2], background=colors[5], format="%a, %b %d - %I:%M%p ",
             mouse_callbacks={'Button1': lambda: qtile.cmd_spawn(chosenTerminal + ' --hold -e cal -y')})
