@@ -346,7 +346,7 @@ def init_widgets_s2():
             text=" 📶", foreground=colors[2], background=colors[4], padding=0, fontsize=14),
         widget.Net(interface="enp3s0f0", format='{down} ↓↑ {up}',
                    foreground=colors[2], background=colors[4], padding=5, mouse_callbacks={
-                    'Button1': lambda: qtile.cmd_spawn(chosenTerminal + ' --hold -e ss -ltp')}),
+                    'Button1': lambda: qtile.cmd_spawn(chosenTerminal + ' -e sudo iftop -i enp3s0f0')}),
         widget.TextBox( text='', background=colors[4], foreground=colors[5], padding=0, fontsize=37),
         widget.TextBox(text=" 🔥", padding=2,
                        foreground=colors[2], background=colors[5], fontsize=11),
