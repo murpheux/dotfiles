@@ -261,12 +261,16 @@ PATH=$PATH:$HOME/.SpaceVim/bin
 export HISTCONTROL=ignoreboth:erasedups
 export HISTFILESIZE=100000
 export HISTSIZE=100000
-export HISTIGNORE='ls *:rm *:cls:h:pwd:rm -rf *:ll:paru:paru -Syy:paru -Syu:paru -Syyu:cd *'
-setopt INC_APPEND_HISTORY
+export HISTORY_IGNORE="(ls|ll|pwd|clear|dig *|rm *|cls|h|pwd|rm -rf *|paru|paru -Syy|paru -Syu|paru -Syyu|cd *:sz)"
 #export HISTTIMEFORMAT="[%F %T] "
 #setopt EXTENDED_HISTORY
+setopt INC_APPEND_HISTORY
 setopt HIST_FIND_NO_DUPS
+setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+#bash
+#export HISTIGNORE='ls *:ll *:pwd:clear:dig *:rm *:cls:h:pwd:rm -rf *:ll:paru:paru -Syy:paru -Syu:paru -Syyu:cd *:sz'
 
 export PATH="$PATH:/home/murpheux/istio-1.9.1/bin"
 export PATH="${PATH}:${HOME}/.krew/bin"
