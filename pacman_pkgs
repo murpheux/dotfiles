@@ -11,6 +11,7 @@ alsa-utils
 android-tools
 android-udev
 ansible
+arc-darkest-theme-git
 arch-install-scripts
 asciiquarium
 aspell-en
@@ -110,6 +111,7 @@ gnome-icon-theme
 gnome-keyring
 gnome-screenshot
 gnome-themes-extra
+gnu-netcat
 go
 google-cloud-sdk
 gparted
@@ -136,6 +138,7 @@ hollywood
 hyperfine
 i3-gaps
 iat
+iftop
 inetutils
 inkscape
 intel-ucode
@@ -156,6 +159,7 @@ jre-openjdk
 jre-openjdk-headless
 keybase-bin
 kitty
+krdc
 kubectl
 kubectx
 languagetool
@@ -312,7 +316,8 @@ qtile-plasma
 rambox-bin
 reaper-bin
 reiserfsprogs
-remmina
+remmina-git
+remmina-plugin-rdesktop
 robo3t-bin
 rpi-imager
 rsync
@@ -339,7 +344,7 @@ sshfs
 sshpass
 stack
 starship
-sublime-text-3
+sublime-text-4
 sudo
 sysfsutils
 system-config-printer
